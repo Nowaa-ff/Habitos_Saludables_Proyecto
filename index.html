@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Ruta de Hábitos: Compañeros de Bienestar RPG | ETec UM</title>
+<title>Ruta de Hábitos: Compañeros de Bienestar RPG</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,9 @@
             950: '#071512',
             900: '#0e241f',
             800: '#14322C',
-            700: '#1c423b',
-            600: '#26544b',
-            500: '#346d62',
+            700: '#1b4139',
+            600: '#26544a',
+            500: '#346d60',
           },
           parchment: {
             50:  '#FFFEFA',
@@ -35,6 +35,7 @@
             200: '#FAF3E4',
             300: '#F0E4CE',
             400: '#E4D3B4',
+            500: '#d1be9b'
           },
           gold: {
             DEFAULT: '#E8A33D',
@@ -63,36 +64,39 @@
 
 <style>
   body {
-    background-color: #14322C;
-    background-image: radial-gradient(rgba(250, 243, 228, 0.07) 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
+    background-color: #122b25;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(232, 163, 61, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(127, 163, 122, 0.08) 0%, transparent 40%),
+      radial-gradient(rgba(250, 243, 228, 0.06) 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 26px 26px;
     font-family: 'Nunito', sans-serif;
     color: #2c3e35;
   }
 
   .btn-3d {
-    box-shadow: 0 4px 0 #0e241f;
-    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #0a1c17;
+    transition: all 0.12s ease;
   }
   .btn-3d:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #0e241f;
+    box-shadow: 0 0 0 #0a1c17;
   }
 
   .btn-3d-gold {
-    box-shadow: 0 4px 0 #ba791b;
+    box-shadow: 0 4px 0 #b3741b;
   }
   .btn-3d-gold:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #ba791b;
+    box-shadow: 0 0 0 #b3741b;
   }
 
   .btn-3d-terracotta {
-    box-shadow: 0 4px 0 #a33224;
+    box-shadow: 0 4px 0 #9c3023;
   }
   .btn-3d-terracotta:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #a33224;
+    box-shadow: 0 0 0 #9c3023;
   }
 
   .btn-3d-sage {
@@ -104,7 +108,7 @@
   }
 
   .card-3d {
-    box-shadow: 0 6px 0 rgba(14, 36, 31, 0.45);
+    box-shadow: 0 8px 0 rgba(7, 21, 18, 0.45);
   }
 
   @keyframes petBob {
@@ -115,18 +119,9 @@
     animation: petBob 3s ease-in-out infinite;
   }
 
-  @keyframes shadowBreathe {
-    0%, 100% { transform: scale(1); opacity: 0.25; }
-    50% { transform: scale(0.9); opacity: 0.16; }
-  }
-  .animate-shadow {
-    animation: shadowBreathe 3s ease-in-out infinite;
-    transform-origin: center;
-  }
-
   @keyframes auraPulse {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.08); opacity: 0.95; }
+    0%, 100% { transform: scale(1); opacity: 0.75; }
+    50% { transform: scale(1.09); opacity: 0.98; }
   }
   .animate-aura {
     animation: auraPulse 2.2s ease-in-out infinite;
@@ -135,7 +130,7 @@
 
   @keyframes floatUp {
     0% { transform: translateY(0) scale(0.8); opacity: 1; }
-    100% { transform: translateY(-45px) scale(1.3); opacity: 0; }
+    100% { transform: translateY(-50px) scale(1.3); opacity: 0; }
   }
   .animate-float-up {
     animation: floatUp 1.2s ease-out forwards;
@@ -166,18 +161,13 @@
   @keyframes tearDrop { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
   .animate-tear { animation: tearDrop 1.2s ease-in infinite; }
 
-  @keyframes fxUp { 0% { opacity: 0; transform: translateY(20px) scale(.5); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(-80px) scale(1.2) rotate(20deg); } }
-  @keyframes fxDown { 0% { opacity: 0; transform: translateY(-10px); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(70px); } }
-  .fx-up { animation: fxUp 1.7s ease-out both; }
-  .fx-down { animation: fxDown 1.7s ease-in both; }
-
   ::-webkit-scrollbar { width: 8px; height: 8px; }
-  ::-webkit-scrollbar-track { background: #14322C; }
-  ::-webkit-scrollbar-thumb { background: #346d62; border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: #122b25; }
+  ::-webkit-scrollbar-thumb { background: #26544a; border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: #7FA37A; }
 </style>
 </head>
-<body class="min-h-screen text-slate-800 antialiased selection:bg-gold selection:text-slate-900 pb-16">
+<body class="min-h-screen text-slate-800 antialiased selection:bg-gold selection:text-slate-900 pb-20">
 <div id="root"></div>
 
 <script>
@@ -186,13 +176,6 @@ const E = React.createElement;
 
 function todayKey(d = new Date()) {
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
-}
-function dayDiff(a, b) {
-  const p = (s) => {
-    const [y, m, d] = s.split("-").map(Number);
-    return Date.UTC(y, m - 1, d);
-  };
-  return Math.round((p(b) - p(a)) / 864e5);
 }
 function lsRaw(k) {
   try { return window.localStorage.getItem(k); } catch (e) { return null; }
@@ -223,412 +206,365 @@ const sfx = (() => {
     o.start(t); o.stop(t + d + 0.05);
   }
   function seq(list) { if (!api.enabled) return; try { list.forEach((n) => note(...n)); } catch (e) {} }
-  api.good = () => seq([[523,0,.14,"triangle",.18],[659,.09,.14,"triangle",.18],[784,.18,.14,"triangle",.18],[1047,.27,.35,"triangle",.2]]);
-  api.bad = () => seq([[330,0,.22,"sawtooth",.07],[277,.17,.22,"sawtooth",.07],[220,.34,.5,"sawtooth",.07,170]]);
-  api.coin = () => seq([[988,0,.08,"square",.06],[1319,.08,.3,"square",.06]]);
-  api.levelup = () => seq([[523,0,.12,"triangle",.2],[659,.1,.12,"triangle",.2],[784,.2,.12,"triangle",.2],[1047,.3,.12,"triangle",.2],[784,.42,.1,"triangle",.2],[1047,.5,.12,"triangle",.2],[1319,.6,.6,"triangle",.24]]);
-  api.tap = () => seq([[500,0,.1,"sine",.14,900]]);
-  api.bubble = () => seq([[350,0,.08,"sine",.12,750],[650,.08,.12,"sine",.14,1200]]);
-  api.chime = () => seq([[880,0,.25,"sine",.2],[1109,.2,.25,"sine",.2],[1319,.4,.5,"sine",.2],[880,1.1,.25,"sine",.2],[1109,1.3,.25,"sine",.2],[1319,1.5,.6,"sine",.2]]);
+  api.good = () => seq([[523,0,.12,"triangle",.16],[659,.08,.12,"triangle",.16],[784,.16,.12,"triangle",.16],[1047,.24,.32,"triangle",.18]]);
+  api.bad = () => seq([[330,0,.2,"sawtooth",.06],[277,.15,.2,"sawtooth",.06],[220,.3,.45,"sawtooth",.06,170]]);
+  api.coin = () => seq([[988,0,.08,"square",.05],[1319,.08,.28,"square",.05]]);
+  api.levelup = () => seq([[523,0,.1,"triangle",.18],[659,.08,.1,"triangle",.18],[784,.16,.1,"triangle",.18],[1047,.24,.1,"triangle",.18],[1319,.32,.5,"triangle",.2]]);
+  api.tap = () => seq([[500,0,.08,"sine",.12,850]]);
+  api.bubble = () => seq([[380,0,.06,"sine",.1,720],[620,.06,.1,"sine",.12,1100]]);
+  api.chime = () => seq([[880,0,.2,"sine",.18],[1109,.15,.2,"sine",.18],[1319,.3,.4,"sine",.18]]);
   ["pointerdown", "keydown"].forEach((ev) => window.addEventListener(ev, () => { C(); }, { once: true }));
   return api;
 })();
 
+// Aesthetic Species with distinct silhouettes
 const SPECIES = {
-  zorro: { id: "zorro", name: "Zorro", icon: "🦊", desc: "Astuto, alegre y veloz" },
-  gatito: { id: "gatito", name: "Gatito", icon: "🐱", desc: "Curioso, elegante y tierno" },
-  panda: { id: "panda", name: "Panda", icon: "🐼", desc: "Abrazable, sereno y zen" },
-  axolote: { id: "axolote", name: "Axolote", icon: "🦎", desc: "Mágico, acuático y simpático" },
-  dragon: { id: "dragon", name: "Dragón", icon: "🐲", desc: "Místico, noble y protector" },
-  buho: { id: "buho", name: "Búho", icon: "🦉", desc: "Sabio, atento y reflexivo" },
-  capibara: { id: "capibara", name: "Capibara", icon: "🦫", desc: "Súper relajado y sociable" },
-  lobito: { id: "lobito", name: "Lobito", icon: "🐺", desc: "Leal, valiente y compañero" },
-  osito: { id: "osito", name: "Osito", icon: "🐻", desc: "Cálido, dulce y bonachón" },
-  pinguino: { id: "pinguino", name: "Pingüino", icon: "🐧", desc: "Divertido, constante y fiel" },
-  conejito: { id: "conejito", name: "Conejito", icon: "🐰", desc: "Tierno, saltarín y cariñoso" }
+  zorro: { id: "zorro", name: "Zorro Místico", icon: "🦊", desc: "Astuto, alegre y con pelaje esponjoso" },
+  gatito: { id: "gatito", name: "Gatito Kawaii", icon: "🐱", desc: "Curioso, elegante y ronroneador" },
+  panda: { id: "panda", name: "Panda Zen", icon: "🐼", desc: "Tierno, esponjoso y amante de la calma" },
+  axolote: { id: "axolote", name: "Axolote Mágico", icon: "🦎", desc: "Acuático, carismático y luminoso" },
+  conejito: { id: "conejito", name: "Conejito Pompón", icon: "🐰", desc: "Saltarín, tierno y con orejas caídas" },
+  capibara: { id: "capibara", name: "Capibara Chill", icon: "🦫", desc: "El rey supremo de la tranquilidad" },
+  osito: { id: "osito", name: "Osito Meloso", icon: "🐻", desc: "Abrazable, protector y de corazón dulce" },
+  lobito: { id: "lobito", name: "Lobito Lunar", icon: "🐺", desc: "Valiente, leal y fiel compañero" },
+  pinguino: { id: "pinguino", name: "Pingüino Bebé", icon: "🐧", desc: "Simpático, constante y andarín" },
+  dragon: { id: "dragon", name: "Dragón Guardián", icon: "🐲", desc: "Noble, fantástico y protector" }
 };
 
 const PERSONALITIES = {
   alegre: {
     id: "alegre",
-    name: "Alegre",
+    name: "Radiante",
     icon: "✨",
     quotes: [
-      "¡Hoy es un día increíble para cuidarte y brillar! 🌟",
-      "¡Me llena el corazón ver cómo avanzás! 💖",
-      "¡Un hábito a la vez y conquistamos el mundo! 🚀",
-      "¡Qué orgullo me da ser tu compa de aventuras! 🎉",
-      "¡Sonreí! Cada pequeño paso vale oro. ✨"
+      "¡Qué lindo día para cuidar nuestras células! 🌟",
+      "¡Me llena de orgullo ver tu constancia! 💖",
+      "¡Un paso a la vez y llegamos lejísimos! 🚀",
+      "¡Sonreí! La dopamina buena nos hace invencibles. 🎉",
+      "¡Sos increíble! ¡A por el siguiente hábito! ✨"
     ]
   },
   valiente: {
     id: "valiente",
-    name: "Valiente",
+    name: "Guerrero",
     icon: "⚔️",
     quotes: [
-      "¡Ningún desafío es invencible si somos constantes! 🛡️",
-      "¡Forjamos nuestra salud y energía día con día! 💪",
-      "¡Mantente firme! El bienestar es nuestra mejor armadura. 🔥",
-      "¡Cada meta cumplida es una victoria épica! 🗡️"
+      "¡Ningún hábito difícil resiste nuestra disciplina! 🛡️",
+      "¡Forjamos energía y fuerza día tras día! 💪",
+      "¡Mantente firme! El autocuidado es tu mejor escudo. 🔥",
+      "¡Cada meta lograda es una victoria para tu salud! 🗡️"
     ]
   },
   zen: {
     id: "zen",
-    name: "Zen",
+    name: "Tranquilo",
     icon: "🧘",
     quotes: [
-      "Respira profundo... Siente la calma de este instante. 🍃",
-      "El bienestar no es una carrera, es un camino sereno. 🌸",
-      "Como el agua de un arroyo, fluye con armonía y constancia. 🌊",
-      "Paz mental y salud corporal: el equilibrio perfecto. 🎋"
+      "Respira profundo... Cada instante presente cuenta. 🍃",
+      "El bienestar es armonía, no una carrera contra el reloj. 🌸",
+      "Como el agua que fluye, avanza suave pero constante. 🌊",
+      "Paz mental y descanso profundo: el verdadero secreto. 🎋"
     ]
   },
   curioso: {
     id: "curioso",
-    name: "Curioso",
-    icon: "🔍",
+    name: "Científico",
+    icon: "🔬",
     quotes: [
-      "¿Sabías que cada vaso de agua oxigena tus neuronas? 💡",
+      "¿Sabías que cada vaso de agua acelera tus sinapsis? 💡",
       "¡Aprender sobre nuestro cuerpo nos da superpoderes! 📖",
-      "¡Me encanta descubrir nuevas rutinas saludables con vos! 🧭",
-      "¿Qué hábito positivo vamos a explorar y dominar hoy? 🔬"
+      "¡Qué fascinante es ver cómo responden tus mitocondrias! 🧬",
+      "¿Qué hábito biológico vamos a dominar hoy? 🧭"
     ]
   },
   gloton: {
     id: "gloton",
-    name: "Nutri-Foodie",
-    icon: "🍎",
+    name: "Nutri-Lover",
+    icon: "🥑",
     quotes: [
-      "¡Una comida llena de colores alimenta tus células de verdad! 🥗",
-      "¡Qué rico se siente nutrir el cuerpo con frutas y semillas! 🥑",
-      "¿Completamos este hábito y nos preparamos un snack saludable? 🍓",
-      "¡Comer sano y rico es el mayor placer biológico! 🫐"
+      "¡Qué rica es la comida real llena de colores y vida! 🥗",
+      "¡Nutrir tu microbiota es el mejor regalo para tu mente! 🫐",
+      "¿Hacemos este hábito y vamos por una manzana crujiente? 🍏",
+      "¡Comer sano y rico es puro combustible biológico! 🍓"
     ]
   }
 };
 
 const COLOR_PALETTES = [
-  { id: "amber", name: "Zorro Dorado", primary: "#e67e22", secondary: "#d35400", belly: "#fdf2e9", dark: "#ba4a00" },
-  { id: "emerald", name: "Bosque Sagrado", primary: "#2ecc71", secondary: "#1abc9c", belly: "#e8f8f5", dark: "#27ae60" },
-  { id: "sapphire", name: "Noche Cósmica", primary: "#3498db", secondary: "#2980b9", belly: "#ebf5fb", dark: "#1f618d" },
-  { id: "amethyst", name: "Místico Lavanda", primary: "#9b59b6", secondary: "#8e44ad", belly: "#f5eeed", dark: "#7d3c98" },
-  { id: "rose", name: "Flor de Sakura", primary: "#ff7675", secondary: "#d63031", belly: "#ffeaa7", dark: "#e17055" },
-  { id: "charcoal", name: "Sombras Puras", primary: "#485460", secondary: "#1e272e", belly: "#d2dae2", dark: "#2d3436" },
-  { id: "sand", name: "Capibara Cálido", primary: "#a77b56", secondary: "#805a3b", belly: "#f3e5ab", dark: "#6e4726" },
-  { id: "mint", name: "Menta Fresca", primary: "#00b894", secondary: "#00cec9", belly: "#e8f8f5", dark: "#0984e3" },
-  { id: "peach", name: "Melocotón Pastel", primary: "#fab1a0", secondary: "#e17055", belly: "#fff5f0", dark: "#d63031" }
+  { id: "amber", name: "Zorro Ámbar", primary: "#e67e22", secondary: "#d35400", belly: "#fff5eb", highlight: "#f39c12", blush: "#ff7675" },
+  { id: "matcha", name: "Matcha Latte", primary: "#78ab6e", secondary: "#588b4e", belly: "#f4faee", highlight: "#9cd192", blush: "#f8a5a5" },
+  { id: "sakura", name: "Flor de Sakura", primary: "#f48fb1", secondary: "#e91e63", belly: "#fff0f5", highlight: "#f8bbd0", blush: "#ff4081" },
+  { id: "boba", name: "Té Boba Caramelo", primary: "#b38257", secondary: "#8c582f", belly: "#fdf6ee", highlight: "#cca57d", blush: "#f19066" },
+  { id: "lavender", name: "Lavanda Pastel", primary: "#9d8df1", secondary: "#7b61ff", belly: "#f6f3ff", highlight: "#b8aaff", blush: "#ff7675" },
+  { id: "sky", name: "Azul Brisa", primary: "#56b4d3", secondary: "#348ac7", belly: "#eef8fc", highlight: "#8ad0e8", blush: "#f78fb3" },
+  { id: "charcoal", name: "Grafito Suave", primary: "#4b5563", secondary: "#2c3e50", belly: "#e5e7eb", highlight: "#6b7280", blush: "#f87171" },
+  { id: "honey", name: "Miel Dorada", primary: "#f1c40f", secondary: "#e67e22", belly: "#fffde7", highlight: "#f9e79f", blush: "#ff7675" },
+  { id: "mint", name: "Menta Helada", primary: "#48dbfb", secondary: "#0abde3", belly: "#f0fcff", highlight: "#8eedff", blush: "#ff7675" }
 ];
 
 const POSES = {
-  happy: { id: "happy", name: "Feliz", icon: "😊" },
-  determined: { id: "determined", name: "Determinado", icon: "😤" },
-  sleeping: { id: "sleeping", name: "Durmiendo", icon: "😴" },
-  celebrating: { id: "celebrating", name: "Celebrando", icon: "🥳" },
+  happy: { id: "happy", name: "Alegre", icon: "✨" },
+  determined: { id: "determined", name: "Enfocado", icon: "🔥" },
+  sleeping: { id: "sleeping", name: "Descanso", icon: "😴" },
+  celebrating: { id: "celebrating", name: "Celebrando", icon: "🎉" },
   energized: { id: "energized", name: "Energizado", icon: "⚡" }
 };
 
 const EQUIPMENT_CATALOGUE = [
-  { id: "crown_gold", slot: "head", name: "Corona de Campeón", icon: "👑", price: 60, desc: "Para maestras y maestros del bienestar" },
-  { id: "wizard_hat", slot: "head", name: "Sombrero Sabio", icon: "🧙", price: 50, desc: "Concentración y serenidad mental" },
-  { id: "sun_glasses", slot: "head", name: "Lentes Cool", icon: "🕶️", price: 35, desc: "Estilo radiante para salir a caminar" },
-  { id: "bunny_ears", slot: "head", name: "Orejas de Conejito", icon: "🐰", price: 30, desc: "Tiemblan de emoción y ternura" },
-  { id: "lucky_flower", slot: "head", name: "Flor de Cerezo", icon: "🌸", price: 25, desc: "Calma aromática natural" },
-  { id: "headphones", slot: "head", name: "Auriculares Lo-Fi", icon: "🎧", price: 45, desc: "Para estudiar o entrenar con ritmo" },
-  { id: "party_hat", slot: "head", name: "Gorro Festivo", icon: "🥳", price: 20, desc: "¡Celebrar cada pequeño logro!" },
-  { id: "cape_hero", slot: "body", name: "Capa de Héroe", icon: "🦸", price: 55, desc: "Ondea al ritmo de tus victorias" },
-  { id: "scarf_cozy", slot: "body", name: "Bufanda Tejida", icon: "🧣", price: 25, desc: "Calentita y reconfortante" },
-  { id: "vest_adventure", slot: "body", name: "Chaleco Senderista", icon: "🦺", price: 40, desc: "Listo para salir al aire libre" },
-  { id: "water_bottle", slot: "hand", name: "Botella Térmica 1L", icon: "🧊", price: 25, desc: "Agua fría para células activas" },
-  { id: "green_apple", slot: "hand", name: "Manzana Crujiente", icon: "🍏", price: 15, desc: "Fibra y antioxidantes naturales" },
-  { id: "open_book", slot: "hand", name: "Libro de Biología", icon: "📖", price: 35, desc: "Conocimiento científico puro" },
-  { id: "wand_magic", slot: "hand", name: "Varita de Luz", icon: "🪄", price: 50, desc: "Canaliza tu dopamina positiva" },
-  { id: "aura_stars", slot: "aura", name: "Aura de Estrellas", icon: "✨", price: 75, desc: "Destellos de alegría y vitalidad" },
-  { id: "aura_fire", slot: "aura", name: "Fuego Motivacional", icon: "🔥", price: 85, desc: "Pasión inquebrantable por tus metas" },
-  { id: "aura_bubbles", slot: "aura", name: "Burbujas Zen", icon: "🫧", price: 60, desc: "Relajación y respiración profunda" },
-  { id: "aura_leaves", slot: "aura", name: "Brisa Natural", icon: "🍃", price: 65, desc: "Frescura botánica y conexión vegetal" },
-  { id: "pet_butterfly", slot: "pet", name: "Mariposa Monarca", icon: "🦋", price: 50, desc: "Revolotea alegremente a tu lado" },
-  { id: "pet_bird", slot: "pet", name: "Pajarito Cantarín", icon: "🐦", price: 55, desc: "Compañero musical de tus mañanas" }
+  // Headwear
+  { id: "crown_gold", slot: "head", category: "head", name: "Corona de Laureles", icon: "👑", price: 50, desc: "Símbolo de maestría en hábitos" },
+  { id: "flower_bow", slot: "head", category: "head", name: "Moño & Flor Coquette", icon: "🌸", price: 30, desc: "Dulzura y encanto natural" },
+  { id: "cat_beanie", slot: "head", category: "head", name: "Gorro Cozy de Lana", icon: "🧶", price: 35, desc: "Abrigo y confort otoñal" },
+  { id: "cool_glasses", slot: "head", category: "head", name: "Gafas de Estudio Cool", icon: "🕶️", price: 40, desc: "Concentración con estilo" },
+  { id: "headphones_pro", slot: "head", category: "head", name: "Auriculares Lo-Fi", icon: "🎧", price: 45, desc: "Música binaural para estudiar" },
+  { id: "wizard_hat", slot: "head", category: "head", name: "Sombrero Estelar", icon: "🧙", price: 55, desc: "Sabiduría ancestral y calma" },
+  { id: "sprout_clip", slot: "head", category: "head", name: "Brote de Plantita", icon: "🌱", price: 20, desc: "Creciendo día a día" },
+  { id: "party_cone", slot: "head", category: "head", name: "Bonete de Fiesta", icon: "🥳", price: 25, desc: "¡Celebrar cada logro diario!" },
+
+  // Body & Clothes
+  { id: "hero_cape", slot: "body", category: "body", name: "Capa de Héroe Carmesí", icon: "🦸", price: 50, desc: "Ondea al conquistar tus metas" },
+  { id: "warm_scarf", slot: "body", category: "body", name: "Bufanda Escocesa", icon: "🧣", price: 30, desc: "Calidez en mañanas frescas" },
+  { id: "adventure_vest", slot: "body", category: "body", name: "Chaleco Explorador", icon: "🦺", price: 40, desc: "Para salidas y caminatas" },
+  { id: "fairy_wings", slot: "body", category: "body", name: "Alas de Hada Mágica", icon: "🧚", price: 65, desc: "Ligereza y energía sutil" },
+  { id: "gold_bell", slot: "body", category: "body", name: "Cascabel Dorado", icon: "🔔", price: 25, desc: "Sonido alegre en cada paso" },
+
+  // Hand & Accessories
+  { id: "boba_tea", slot: "hand", category: "hand", name: "Smoothie de Matcha & Frutas", icon: "🧋", price: 35, desc: "Antioxidantes naturales sin azúcar" },
+  { id: "stanley_tumbler", slot: "hand", category: "hand", name: "Termo Hidratante 1L", icon: "🧊", price: 30, desc: "Agua fría para células activas" },
+  { id: "fresh_apple", slot: "hand", category: "hand", name: "Manzana Crujiente", icon: "🍏", price: 15, desc: "Pectina y saciedad pura" },
+  { id: "science_book", slot: "hand", category: "hand", name: "Libro de Biología Celular", icon: "📖", price: 40, desc: "Conocimiento científico aplicable" },
+  { id: "magic_wand", slot: "hand", category: "hand", name: "Varita de Cristal", icon: "🪄", price: 55, desc: "Canaliza tu dopamina positiva" },
+  { id: "dumbbell", slot: "hand", category: "hand", name: "Pesa de Fuerza 3kg", icon: "🏋️", price: 35, desc: "Músculos sanos y metabolismo activo" },
+
+  // Auras
+  { id: "aura_stars", slot: "aura", category: "aura", name: "Aura Polvo de Estrellas", icon: "✨", price: 70, desc: "Destellos cósmicos de vitalidad" },
+  { id: "aura_fire", slot: "aura", category: "aura", name: "Fuego de Determinación", icon: "🔥", price: 80, desc: "Pasión incansable por tus hábitos" },
+  { id: "aura_bubbles", slot: "aura", category: "aura", name: "Burbujas Zen Flotantes", icon: "🫧", price: 55, desc: "Calma y respiración consciente" },
+  { id: "aura_leaves", slot: "aura", category: "aura", name: "Brisa de Hojas y Flores", icon: "🍃", price: 60, desc: "Conexión pura con la naturaleza" },
+
+  // Mini Companions
+  { id: "pet_cat", slot: "pet", category: "pet", name: "Mini Michi Blanco", icon: "🐱", price: 50, desc: "Acompaña con tiernos maullidos" },
+  { id: "pet_bird", slot: "pet", category: "pet", name: "Pajarito Cantarín", icon: "🐦", price: 45, desc: "Te despierta temprano con alegría" },
+  { id: "pet_ghost", slot: "pet", category: "pet", name: "Fantasmito Feliz", icon: "👻", price: 55, desc: "Un compa travieso y tierno" }
 ];
 
-const HEALTH_FOODS = [
+// Rich Science & Biology FAQ Library
+const BIOLOGY_LIBRARY = [
   {
-    id: "avena_berries",
-    title: "Bowl de Avena Tibia con Chía y Arándanos",
-    category: "desayuno",
-    categoryLabel: "🌅 Desayuno Energético",
-    icon: "🥣",
-    calories: "~380 kcal · Energía Sostenida",
-    macros: { protein: "14g", carbs: "54g (Fibra 11g)", fats: "11g (Omega-3 ALA)" },
-    micronutrients: ["Magnesio", "Zinc", "Vitamina B1", "Polifenoles Antioxidantes"],
-    bioExplanation: "Los beta-glucanos de la avena forman un gel en el intestino que retrasa la digestión, evitando picos de glucosa e insulina en sangre y previniendo la fatiga mental a media mañana. Las semillas de chía aportan ácidos grasos omega-3 indispensables para la fluidez de las membranas neuronales.",
-    bodyBenefit: "🧠 Mayor concentración mental y saciedad prolongada sin pesadez.",
-    tip: "Remojar la avena o las semillas unas horas antes mejora la absorción de minerales al reducir el ácido fítico.",
-    source: "Harvard T.H. Chan School of Public Health - Carbohydrates and Blood Sugar",
-    sourceUrl: "https://www.hsph.harvard.edu/nutritionsource/carbohydrates/fiber/",
-    habitAction: "Desayunar avena integral con frutos o semillas"
+    id: "carbos_mitos",
+    category: "nutricion",
+    title: "¿Los carbohidratos engordan o son malos?",
+    icon: "🍞",
+    short: "¡Falso mito! Son el combustible primordial de tu cerebro y músculos.",
+    body: "Los carbohidratos no son tus enemigos. El cerebro humano consume aproximadamente 120 gramos de glucosa al día exclusivamente para pensar, concentrarse y mantener sinapsis activas. La clave biológica es la calidad: los carbohidratos complejos (avena, legumbres, arroz integral, frutas enteras) vienen empaquetados con fibra, lo que hace que la glucosa se libere lentamente sin picos bruscos de insulina. En cambio, los carbohidratos refinados (harinas ultraprocesadas, gaseosas) se absorben en minutos, provocando un pico de insulina seguido de una hipoglucemia reactiva (que se siente como cansancio y ganas de comer más azúcar).",
+    takeaway: "💡 Qué hacer: Priorizá granos enteros, legumbres y frutas con piel. Nunca los elimines de golpe si estudiás o hacés deporte."
   },
   {
-    id: "tostada_huevo_palta",
-    title: "Tostada de Pan de Masa Madre con Palta y Huevo",
-    category: "desayuno",
-    categoryLabel: "🌅 Desayuno Proteico",
+    id: "proteina_cuanto",
+    category: "nutricion",
+    title: "¿Cuánta proteína necesito realmente según mi peso?",
+    icon: "🥩",
+    short: "Entre 1.2 y 1.6 gramos por cada kilogramo de tu peso corporal.",
+    body: "Las proteínas se descomponen en aminoácidos que tu cuerpo usa para reparar tejidos, construir anticuerpos y sintetizar neurotransmisores como la serotonina y dopamina. Si pesás 60 kg y tenés actividad normal/moderada, tu meta biológica ideal es de ~72g a 96g al día. No necesitás suplementos caros si incluís huevos (6g c/u), legumbres como lentejas o garbanzos (15-18g por taza cocida), pechuga de pollo, tofu o yogur natural.",
+    takeaway: "💡 Qué hacer: Distribuí la proteína en tus 3 o 4 comidas del día en vez de comerla toda junta en la cena."
+  },
+  {
+    id: "grasas_buenas",
+    category: "nutricion",
+    title: "¿Por qué las grasas son indispensables para las neuronas?",
     icon: "🥑",
-    calories: "~420 kcal · Alta Saciedad",
-    macros: { protein: "18g (Alto Valor Biológico)", carbs: "32g (Fibra 7g)", fats: "22g (Grasas monoinsaturadas)" },
-    micronutrients: ["Colina", "Luteína", "Potasio", "Vitamina E y B12"],
-    bioExplanation: "El huevo contiene todos los aminoácidos esenciales necesarios para la síntesis de neurotransmisores y la reparación celular. La yema es rica en colina, precursor de la acetilcolina (neurotransmisor clave de la memoria). La palta aporta ácido oleico protector del endotelio vascular.",
-    bodyBenefit: "👁️ Salud ocular y síntesis de neurotransmisores cerebrales.",
-    tip: "Elegir panes con fermentación natural o harina 100% integral para un índice glucémico mucho más equilibrado.",
-    source: "MedlinePlus / NIH - Proteínas en la Dieta y Función Celular",
-    sourceUrl: "https://medlineplus.gov/spanish/ency/article/002467.htm",
-    habitAction: "Comer huevo o proteína magra con grasas saludables en el desayuno"
+    short: "El 60% del peso seco de tu cerebro está compuesto por lípidos.",
+    body: "Las neuronas están envueltas en una vaina aislante llamada mielina, indispensable para que los impulsos eléctricos viajen a gran velocidad. Esta vaina está hecha principalmente de lípidos. Los ácidos grasos poliinsaturados Omega-3 (especialmente DHA y EPA presentes en pescados, chía y nueces) forman parte de la membrana celular de las neuronas, aumentando su fluidez y plasticidad. Además, las grasas saludables son indispensables para absorber las vitaminas liposolubles A, D, E y K.",
+    takeaway: "💡 Qué hacer: Sumá palta, frutos secos, semillas y aceite de oliva virgen crudo a tus comidas."
   },
   {
-    id: "plato_harvard_pollo",
-    title: "Plato Equilibrado: Pechuga a la Plancha, Quinoa y Ensalada Arcoíris",
-    category: "almuerzo",
-    categoryLabel: "🥗 Almuerzo Completo",
-    icon: "🥗",
-    calories: "~520 kcal · Plato de Harvard",
-    macros: { protein: "38g", carbs: "48g (Fibra 9g)", fats: "15g (Aceite de Oliva Extra Virgen)" },
-    micronutrients: ["Hierro Hemo", "Vitamina C", "Ácido Fólico", "Fitoquímicos"],
-    bioExplanation: "Sigue la proporción biológica ideal de Harvard: 50% de vegetales coloridos (zanahoria, tomate, hojas verdes), 25% de granos integrales y 25% de proteína limpia. La vitamina C de los vegetales frescos maximiza la biodisponibilidad y absorción del hierro.",
-    bodyBenefit: "⚡ Producción de hemoglobina y oxígeno celular sin modorra post-almuerzo.",
-    tip: "Aliñar con aceite de oliva extra virgen en crudo para potenciar la absorción de vitaminas liposolubles (A, D, E, K).",
-    source: "Harvard T.H. Chan - The Healthy Eating Plate",
-    sourceUrl: "https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/plate-spanish/",
-    habitAction: "Armar un almuerzo con 50% vegetales y proteína de calidad"
-  },
-  {
-    id: "guiso_lentejas_arroz",
-    title: "Guisado Suave de Lentejas con Calabaza y Arroz Integral",
-    category: "almuerzo",
-    categoryLabel: "🍲 Almuerzo Vegetal / Legumbres",
-    icon: "🍲",
-    calories: "~460 kcal · Proteína Vegetal Completa",
-    macros: { protein: "22g", carbs: "68g (Fibra 16g)", fats: "8g" },
-    micronutrients: ["Hierro no hemo", "Magnesio", "Zinc", "Betacarotenos"],
-    bioExplanation: "La combinación biológica de legumbres (ricas en lisina pero bajas en metionina) y cereales integrales (ricos en metionina) genera una proteína vegetal completa con excelente perfil de aminoácidos. Su fibra prebiótica nutre la microbiota colónica, produciendo ácidos grasos de cadena corta (AGCC).",
-    bodyBenefit: "🦠 Fortalecimiento del microbioma intestinal y defensa inmunológica.",
-    tip: "Añadir unas gotas de jugo de limón al servir para que la vitamina C multiplique por 3 la absorción del hierro vegetal.",
-    source: "Organización Mundial de la Salud (OMS) - Dieta Sana y Legumbres",
-    sourceUrl: "https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet",
-    habitAction: "Consumir al menos una porción de legumbres ricas en fibra"
-  },
-  {
-    id: "salmon_pescado_verduras",
-    title: "Pescado al Horno con Verduras Asadas y Papas al Vapor",
-    category: "almuerzo",
-    categoryLabel: "🐟 Almuerzo Antiinflamatorio",
-    icon: "🐟",
-    calories: "~490 kcal · Salud Cardiovascular",
-    macros: { protein: "34g", carbs: "36g (Fibra 6g)", fats: "19g (Omega-3 EPA/DHA)" },
-    micronutrients: ["Omega-3 EPA/DHA", "Vitamina D3", "Selenio", "Fósforo"],
-    bioExplanation: "Los pescados son la fuente biológica primordial de ácidos grasos poliinsaturados EPA y DHA de cadena larga. Estos lípidos se integran en los fosfolípidos de las membranas celulares del miocardio y la corteza cerebral, modulando respuestas antiinflamatorias y reduciendo triglicéridos.",
-    bodyBenefit: "❤️ Salud arterial, reducción de inflamación celular y agilidad cognitiva.",
-    tip: "Cocinar al horno a temperatura moderada para preservar la integridad de los ácidos grasos esenciales sin oxidarlos.",
-    source: "Fundación Española del Corazón - Pescados y Ácidos Grasos Esenciales",
-    sourceUrl: "https://fundaciondelcorazon.com/",
-    habitAction: "Comer pescado o fuente rica de Omega-3"
-  },
-  {
-    id: "sopa_crema_calabaza",
-    title: "Crema de Calabaza y Zanahoria con Tofu / Semillas Tostadas",
-    category: "cena",
-    categoryLabel: "🌙 Cena Ligera para el Sueño",
-    icon: "🥣",
-    calories: "~310 kcal · Digestión Suave",
-    macros: { protein: "13g", carbs: "38g (Fibra 8g)", fats: "10g" },
-    micronutrients: ["Triptófano", "Potasio", "Betacarotenos", "Magnesio"],
-    bioExplanation: "Cenar liviano permite que durante la noche el organismo concentre su energía en el sistema glinfático (limpieza de toxinas cerebrales) en lugar de una digestión pesada. La calabaza y las semillas de zapallo aportan triptófano, aminoácido precursor de la serotonina y la melatonina.",
-    bodyBenefit: "😴 Facilita la conciliación del sueño profundo reparador y el descanso gástrico.",
-    tip: "Cenar al menos 2 horas antes de ir a la cama para respetar los ritmos circadianos hormonales.",
-    source: "Sleep Foundation - Fisiología de la Alimentación y el Sueño",
-    sourceUrl: "https://www.sleepfoundation.org/nutrition",
-    habitAction: "Cenar ligero y al menos 2 horas antes de acostarse"
-  },
-  {
-    id: "snack_frutos_secos_manzana",
-    title: "Manzana Verde en Láminas con Mantequilla de Maní y Nueces",
-    category: "snack",
-    categoryLabel: "🍎 Snack Inteligente",
-    icon: "🍏",
-    calories: "~240 kcal · Anti-Ansiedad",
-    macros: { protein: "7g", carbs: "26g (Fibra 5g)", fats: "13g (Lípidos saludables)" },
-    micronutrients: ["Quercetina", "Vitamina E", "Magnesio", "Boro"],
-    bioExplanation: "La pectina (fibra soluble de la manzana) unida a los lípidos y proteínas del maní amortigua la velocidad de digestión. Esto frena el deseo impulsivo de azúcares refinados por la tarde y estabiliza la liberación de dopamina en el circuito de recompensa cerebral.",
-    bodyBenefit: "⚡ Control biológico de la ansiedad y aporte antioxidante.",
-    tip: "Mantener la cáscara bien lavada de la manzana: allí se concentra la mayor densidad de polifenoles y flavonoides.",
-    source: "National Institutes of Health (NIH) - Fibra y Salud Metabólica",
-    sourceUrl: "https://www.nih.gov/",
-    habitAction: "Elegir una fruta con frutos secos como snack consciente"
-  },
-  {
-    id: "yogur_griego_semillas",
-    title: "Yogur Natural / Griego con Semillas de Girasol y Canela",
-    category: "snack",
-    categoryLabel: "🥛 Snack Probiótico",
-    icon: "🫐",
-    calories: "~210 kcal · Eje Intestino-Cerebro",
-    macros: { protein: "15g", carbs: "12g", fats: "8g" },
-    micronutrients: ["Calcio iónico", "Lactobacilos vivos", "Fósforo", "Vitamina B2"],
-    bioExplanation: "Los fermentos lácteos vivos colonizan transitoriamente el tracto digestivo, estimulando la barrera intestinal y la comunicación a través del nervio vago (eje microbiota-intestino-cerebro), donde se sintetiza más del 80% de la serotonina del cuerpo.",
-    bodyBenefit: "🛡️ Flora bacteriana sana y equilibrio del estado de ánimo.",
-    tip: "Evitar yogures con azúcar añadido o jarabes; la canela aporta un toque dulce natural y mejora la sensibilidad a la insulina.",
-    source: "Frontiers in Cellular and Infection Microbiology - Gut-Brain Axis",
-    sourceUrl: "https://www.frontiersin.org/",
-    habitAction: "Consumir alimentos fermentados probióticos (yogur o kéfir)"
-  },
-  {
-    id: "agua_infusionada",
-    title: "Agua Fisiológica Infusionada con Pepino, Rodajas de Limón y Menta",
-    category: "hidratacion",
-    categoryLabel: "💧 Hidratación Osmótica",
-    icon: "🍋",
-    calories: "~15 kcal · Electrolitos Suaves",
-    macros: { protein: "0g", carbs: "3g", fats: "0g" },
-    micronutrients: ["Vitamina C", "Potasio celular", "Antioxidantes cítricos"],
-    bioExplanation: "El agua es el solvente biológico en el cual ocurren todas las reacciones químicas celulares (glucólisis, síntesis de proteínas). Una deshidratación celular de tan solo el 2% reduce en un 15% la memoria de trabajo y la velocidad de procesamiento neuronal.",
-    bodyBenefit: "💦 Regulación de la volemia, transporte de metabolitos y cero azúcar.",
-    tip: "Tener siempre una botella visible en el escritorio: el cerebro responde a estímulos visuales para recordar beber agua.",
-    source: "European Journal of Clinical Nutrition - Water and Hydration Physiology",
-    sourceUrl: "https://www.nature.com/ejcn/",
-    habitAction: "Completar la meta de vasos de agua natural del día"
-  }
-];
-
-const GROUP_MEMBERS = [
-  {
-    name: "Noa Fischer",
-    role: "Coordinación & Lógica de Hábitos",
-    focus: "Neurobiología del Sistema Nervioso, Dopamina y Formación de Hábitos",
-    avatar: "🦊",
-    badge: "Líder de Proyecto",
-    desc: "Investigó cómo las recompensas y el bucle de hábitos (señal, rutina, gratificación) estimulan la plasticidad sináptica en los ganglios basales para sostener hábitos saludables en el tiempo."
-  },
-  {
-    name: "Constanza Smaha",
-    role: "Investigación de Nutrición Celular",
-    focus: "Metabolismo de Macronutrientes, Glucemia y Bioenergética Mitocondrial",
-    avatar: "🥑",
-    badge: "Especialista Nutricional",
-    desc: "Desarrolló el catálogo de comidas saludables, clasificando la biodisponibilidad de nutrientes y cómo los alimentos reales mantienen los niveles de energía celular sin picos nocivos de glucosa."
-  },
-  {
-    name: "María Villalobos",
-    role: "Gamificación RPG & Fisiología",
-    focus: "Fisiología del Movimiento, Sistema Musculoesquelético y Dinámicas Lúdicas",
-    avatar: "⚔️",
-    badge: "Diseñadora de Mecánicas",
-    desc: "Diseñó el sistema de puntos de experiencia (XP), monedas y niveles como reflejo de la perseverancia física, integrando pausas activas y ejercicios cotidianos recomendados por la OMS."
-  },
-  {
-    name: "Paulina Olguin",
-    role: "Cronobiología & Higiene del Sueño",
-    focus: "Ritmos Circadianos, Glándula Pineal, Melatonina y Sistema Glinfático",
-    avatar: "🌙",
-    badge: "Investigadora del Sueño",
-    desc: "Profundizó en la vital importancia del sueño profundo (fases NREM y REM) para la regeneración tisular y el lavado nocturno de desechos metabólicos cerebrales a través del sistema glinfático."
-  },
-  {
-    name: "Amparo Salinas",
-    role: "Homeostasis & Experiencia Visual",
-    focus: "Equilibrio Hidroelectrolítico, Presión Osmótica y Bienestar Estético",
-    avatar: "✨",
-    badge: "Diseño & Fisiología Hídrica",
-    desc: "Estructuró la calculadora de hidratación celular según el peso biológico y la ambientación visual táctil 'cozy RPG', asegurando que la aplicación sea tan cálida y linda como educativa."
-  }
-];
-
-const BIOLOGY_PILLARS = [
-  {
-    title: "1. Neurobiología del Hábito y Dopamina",
+    id: "dopamina_habito",
+    category: "habitos",
+    title: "¿Cómo se forma biológicamente un hábito en el cerebro?",
     icon: "🧠",
-    color: "border-gold bg-parchment-100",
-    summary: "Los hábitos no son solo fuerza de voluntad: son circuitos neuronales en los ganglios basales (estriado dorsal). Cada vez que registramos una acción positiva y recibimos un refuerzo visual/sonoro agradable, se libera dopamina en la vía mesolímbica, facilitando la neuroplasticidad y haciendo que el hábito sea automático y placentero."
+    short: "A través del bucle: Señal → Rutina → Recompensa mediado por dopamina.",
+    body: "Cuando repetís una acción saludable y recibís una recompensa (como marcar un check, escuchar un sonido agradable o sentir orgullo), el área tegmental ventral libera dopamina hacia el cuerpo estriado y la corteza prefrontal. Con la repetición constante, las sinapsis se fortalecen (potenciación a largo plazo) y la decisión pasa de la corteza prefrontal (que gasta mucha energía) a los ganglios basales (que funcionan en piloto automático eficiente). ¡Por eso al principio cuesta, pero a los 21-66 días se vuelve natural!",
+    takeaway: "💡 Qué hacer: Usá pequeños disparadores visuales (como tener la botella en la mesa) y celebrá cada logro chico."
   },
   {
-    title: "2. Nutrición Celular y Curva de Glucemia",
-    icon: "🥗",
-    color: "border-sage bg-parchment-100",
-    summary: "Tus células no comen calorías vacías: utilizan aminoácidos para reparar estructuras, ácidos grasos para construir membranas y glucosa para producir ATP en las mitocondrias. Los alimentos ricos en fibra y proteína de la app evitan picos de insulina, protegiendo al páncreas y asegurando combustible constante al cerebro."
-  },
-  {
-    title: "3. Ritmos Circadianos y Sistema Glinfático",
+    id: "sueno_glinfatico",
+    category: "sueno",
+    title: "¿Qué le ocurre al cerebro mientras dormís 8 horas?",
     icon: "🌙",
-    color: "border-terracotta bg-parchment-100",
-    summary: "La luz azul de las pantallas suprime la melatonina en la glándula pineal, interrumpiendo el ciclo circadiano. Al desconectar y dormir 8 horas, se activa el sistema glinfático: los canales de astrocitos permiten que el líquido cefalorraquídeo elimine proteínas insolubles y toxinas acumuladas durante el día."
+    short: "Se activa el sistema glinfático, el 'camión de basura' biológico del cerebro.",
+    body: "Durante la vigilia, el metabolismo neuronal genera desechos proteicos. Mientras dormís en sueño profundo (fases NREM), las células gliales se contraen, permitiendo que el líquido cefalorraquídeo fluya a gran velocidad por el tejido cerebral, lavando proteínas tóxicas (como la beta-amiloide). Al mismo tiempo, en la fase REM se transfieren los recuerdos del hipocampo a la corteza cerebral, consolidando lo que estudiaste.",
+    takeaway: "💡 Qué hacer: Dormir 8 horas no es tiempo perdido: es cuando tu cerebro limpia toxinas y fija lo aprendido."
   },
   {
-    title: "4. Homeostasis e Hidratación Celular",
+    id: "agua_energia",
+    category: "hidratacion",
+    title: "¿Por qué tener sed ya es un signo de cansancio celular?",
     icon: "💧",
-    color: "border-forest-600 bg-parchment-100",
-    summary: "El cuerpo humano es ~60% agua. El agua mantiene la presión oncótica en los capilares sanguíneos, permite el intercambio osmótico celular y la eliminación renal de metabolitos. Beber agua antes de tener sed previene la deshidratación intracelular y el cansancio prematuro."
+    short: "Una pérdida de solo el 1.5% de agua reduce tu memoria y velocidad mental.",
+    body: "El cuerpo humano es un 60% agua. El agua transporta electrolitos (sodio, potasio, magnesio) necesarios para que las neuronas emitan potenciales de acción. Cuando tu cuerpo activa la sensación de sed, ya estás en un déficit de hidratación del 1% al 2%, suficiente para provocar dolor de cabeza tensional, dificultad para concentrarte y fatiga. Tomar agua mantiene el volumen sanguíneo adecuado y la presión arterial estable.",
+    takeaway: "💡 Qué hacer: Bebé agua a pequeños sorbos a lo largo del día antes de que aparezca la sed intensa."
+  },
+  {
+    id: "ultraprocesados_trampa",
+    category: "nutricion",
+    title: "¿Por qué los ultraprocesados generan tanta adicción?",
+    icon: "🍔",
+    short: "Están diseñados en laboratorio para romper tus señales biológicas de saciedad.",
+    body: "En la naturaleza no existen alimentos con altas concentraciones simultáneas de azúcar refinada, grasa saturada y sal. Los productos ultraprocesados combinan los tres elementos ('punto de la dicha' o bliss point), lo que sobreestimula el circuito de recompensa mesolímbico liberando picos artificiales de dopamina similares a drogas adictivas, mientras apagan las hormonas de saciedad como la leptina y el péptido YY.",
+    takeaway: "💡 Qué hacer: Aplicá la regla del 80/20: basá tu día en comida real con un solo ingrediente y minimizá paquetes con listas eternas."
+  },
+  {
+    id: "luz_pantallas",
+    category: "sueno",
+    title: "¿Cómo afecta la luz azul del celular a la melatonina?",
+    icon: "📱",
+    short: "Las células ganglionares de la retina le dicen a tu cerebro que aún es mediodía.",
+    body: "En tus ojos existen fotorreceptores con un pigmento llamado melanopsina, extremadamente sensible a la longitud de onda azul (460-480 nm) que emiten celulares y monitores. Al recibir esta luz de noche, envían una señal directa al núcleo supraquiasmático (el reloj biológico central), que le ordena a la glándula pineal suspender la secreción de melatonina (la hormona que induce el sueño profundo).",
+    takeaway: "💡 Qué hacer: Activá el modo nocturno/cálido y apagá pantallas 30 a 45 minutos antes de dormir."
   }
+];
+
+// Interactive Biology & Health Quiz Questions
+const QUIZ_QUESTIONS = [
+  {
+    q: "¿Cuál es el principal combustible celular que utiliza el cerebro humano para pensar y concentrarse?",
+    options: ["Ácidos grasos saturados", "Glucosa proveniente de carbohidratos", "Proteínas musculares", "Alcohol"],
+    correct: 1,
+    explanation: "El cerebro consume unos 120g diarios de glucosa. Los carbohidratos complejos aportan glucosa constante y estable."
+  },
+  {
+    q: "¿Qué sistema cerebral se activa durante el sueño profundo para limpiar toxinas y desechos metabólicos?",
+    options: ["Sistema Linfático común", "Sistema Glinfático", "Sistema Digestivo", "Sistema Endocrino"],
+    correct: 1,
+    explanation: "El sistema glinfático utiliza líquido cefalorraquídeo para lavar los desechos acumulados por las neuronas durante el día."
+  },
+  {
+    q: "¿Aproximadamente cuánta proteína diaria se recomienda por kilogramo de peso corporal para una persona activa?",
+    options: ["0.2 a 0.4 g/kg", "1.2 a 1.6 g/kg", "5.0 a 6.0 g/kg", "10 g/kg"],
+    correct: 1,
+    explanation: "Entre 1.2 y 1.6 g/kg cubre la síntesis proteica, reparación tisular y neurotransmisores sin sobrecargar los riñones."
+  },
+  {
+    q: "¿Qué hormona segrega la glándula pineal cuando baja la luz solar para inducir el descanso reparador?",
+    options: ["Adrenalina", "Cortisol", "Melatonina", "Insulina"],
+    correct: 2,
+    explanation: "La melatonina es la hormona de la oscuridad que regula los ritmos circadianos y prepara al organismo para el sueño."
+  },
+  {
+    q: "¿Qué beneficio principal aportan las semillas de chía, nueces y pescados a las neuronas?",
+    options: ["Ácidos grasos Omega-3 indispensables para la membrana celular", "Azúcar simple de rápida absorción", "Calcio para los huesos únicamente", "Sodio para elevar la presión"],
+    correct: 0,
+    explanation: "Los Omega-3 (DHA/EPA/ALA) dan fluidez a las membranas de las sinapsis y reducen la neuroinflamación."
+  },
+  {
+    q: "¿En qué estructura cerebral se automatizan y consolidan los hábitos con la práctica repetida?",
+    options: ["Los ganglios basales (cuerpo estriado)", "El cerebelo únicamente", "La médula espinal", "Las amígdalas"],
+    correct: 0,
+    explanation: "Los ganglios basales procesan los patrones automáticos guiados por la dopamina para ahorrar energía mental."
+  },
+  {
+    q: "¿Qué ocurre biológicamente cuando consumís un alimento con alto índice glucémico (azúcar refinada sola)?",
+    options: ["La glucosa se mantiene estable por 8 horas", "Se produce un pico de insulina seguido de fatiga y hambre precoz", "El cerebro entra en reposo absoluto", "Aumenta la masa muscular automáticamente"],
+    correct: 1,
+    explanation: "El páncreas libera un pico rápido de insulina para bajar la glucosa en sangre, provocando somnolencia y apetito al poco tiempo."
+  },
+  {
+    q: "¿Por qué el agua es biológicamente irremplazable por gaseosas o jugos azucarados?",
+    options: ["Porque no tiene color", "Porque permite el equilibrio osmótico celular sin forzar al páncreas con fructosa/azúcar", "Porque tiene gas", "Porque quita el sueño"],
+    correct: 1,
+    explanation: "El agua hidrata directamente el espacio intracelular y extracelular sin generar picos de glucosa ni sobrecarga hepática."
+  }
+];
+
+// Rich Library of Continuous and Daily Habits
+const PRESET_HABITS = [
+  // Continuous Habits
+  { id: "h_water", type: "habit", title: "Beber 1 Vaso de Agua Fresca (250ml)", positive: true, negative: false, category: "💧 Hidratación", bio: "Mantiene la volemia sanguínea y el transporte de oxígeno a los tejidos.", streak: 3 },
+  { id: "h_fruit", type: "habit", title: "Comer 1 Fruta Entera con Fibra", positive: true, negative: false, category: "🍏 Nutrición", bio: "Aporta polifenoles antioxidantes y pectina que alimenta tu microbiota.", streak: 2 },
+  { id: "h_breathe", type: "habit", title: "5 Minutos de Respiración Diafragmática", positive: true, negative: false, category: "🧘 Mente", bio: "Activa el nervio vago y el sistema parasimpático, reduciendo el cortisol.", streak: 1 },
+  { id: "h_stairs", type: "habit", title: "Subir Escaleras / Pausa Activa de Movimiento", positive: true, negative: false, category: "🏃 Ejercicio", bio: "Estimula la contracción muscular y la absorción celular de glucosa sin insulina.", streak: 4 },
+  { id: "h_sun", type: "habit", title: "10 Minutos de Luz Natural Matutina", positive: true, negative: false, category: "☀️ Circadiano", bio: "Sincroniza el reloj biológico central y frena la melatonina residual.", streak: 2 },
+  { id: "h_bad_soda", type: "habit", title: "Tomar Gaseosas o Bebidas Azucaradas", positive: false, negative: true, category: "⚠️ Alerta", bio: "Evitar picos masivos de glucosa e inflamación celular.", streak: 0 },
+  { id: "h_bad_scroll", type: "habit", title: "Doomscrolling / Pantalla sin Propósito", positive: false, negative: true, category: "📵 Digital", bio: "Protege tu atención y evita la sobreestimulación dopaminérgica vacía.", streak: 0 },
+  { id: "h_bad_snack", type: "habit", title: "Comer Ultraprocesados por Ansiedad", positive: false, negative: true, category: "⚠️ Alerta", bio: "Evita engañar a los centros de saciedad hipotalámicos.", streak: 0 },
+
+  // Daily Routines
+  { id: "d_breakfast", type: "daily", title: "Desayuno Completo: Proteína + Fibra + Grasas Buenas", done: false, streak: 4, category: "🥗 Desayuno", bio: "Evita la hipoglucemia de media mañana y mejora la memoria de trabajo." },
+  { id: "d_exercise", type: "daily", title: "30 Minutos de Ejercicio Físico o Caminata Rápida", done: false, streak: 5, category: "🏃 Fisiología", bio: "Libera endorfinas, BDNF (factor neurotrófico) y fortalece el miocardio." },
+  { id: "d_salad", type: "daily", title: "Almuerzo con 50% de Vegetales de Varios Colores", done: false, streak: 3, category: "🥗 Nutrición", bio: "Sigue la proporción biológica del Plato de Harvard para salud digestiva." },
+  { id: "d_water_goal", type: "daily", title: "Completar la Meta Diaria de Hidratación (Litros)", done: false, streak: 2, category: "💧 Homeostasis", bio: "Optimiza la filtración glomerular y previene cefaleas tensionales." },
+  { id: "d_screen_off", type: "daily", title: "Desconexión de Pantallas 30 min Antes de Dormir", done: false, streak: 1, category: "🌙 Sueño", bio: "Permite el aumento natural de melatonina para iniciar el descanso profundo." },
+  { id: "d_sleep8", type: "daily", title: "Dormir 8 Horas Continuas y Reparadoras", done: false, streak: 6, category: "🌙 Regeneración", bio: "Activa el sistema glinfático y consolida la memoria de largo plazo." }
 ];
 
 function KawaiiEyes({ mood, pose }) {
   if (mood === "good" || pose === "celebrating") {
-    return E("g", { stroke: "#1e272e", strokeWidth: "3.5", strokeLinecap: "round", fill: "none" },
-      E("path", { d: "M 75 70 Q 85 58 95 70" }),
-      E("path", { d: "M 105 70 Q 115 58 125 70" }),
-      E("text", { x: "96", y: "60", fontSize: "14", fill: "#E8A33D" }, "✨")
+    return E("g", { stroke: "#1a1a24", strokeWidth: "3.5", strokeLinecap: "round", fill: "none" },
+      E("path", { d: "M 74 68 Q 85 55 96 68" }),
+      E("path", { d: "M 104 68 Q 115 55 126 68" }),
+      E("text", { x: "96", y: "58", fontSize: "15", fill: "#E8A33D" }, "✨")
     );
   }
   if (mood === "bad" || mood === "sad") {
     return E("g", null,
-      E("circle", { cx: 85, cy: 68, r: 6.5, fill: "#2c3e50" }),
-      E("circle", { cx: 115, cy: 68, r: 6.5, fill: "#2c3e50" }),
-      E("circle", { cx: 87, cy: 66, r: 2.5, fill: "#fff" }),
-      E("circle", { cx: 117, cy: 66, r: 2.5, fill: "#fff" }),
-      E("path", { d: "M 75 60 L 93 55", stroke: "#2c3e50", strokeWidth: 3, strokeLinecap: "round" }),
-      E("path", { d: "M 125 60 L 107 55", stroke: "#2c3e50", strokeWidth: 3, strokeLinecap: "round" }),
-      E("path", { className: "animate-tear", d: "M 80 77 Q 76 86 80 90 Q 84 86 80 77 Z", fill: "#74b9ff" }),
-      E("path", { className: "animate-tear", d: "M 120 77 Q 116 86 120 90 Q 124 86 120 77 Z", fill: "#74b9ff", style: { animationDelay: ".5s" } })
+      E("ellipse", { cx: 85, cy: 68, rx: 7, ry: 8.5, fill: "#1a1a24" }),
+      E("ellipse", { cx: 115, cy: 68, rx: 7, ry: 8.5, fill: "#1a1a24" }),
+      E("circle", { cx: 87, cy: 65, r: 2.5, fill: "#fff" }),
+      E("circle", { cx: 117, cy: 65, r: 2.5, fill: "#fff" }),
+      E("path", { d: "M 75 58 L 94 63", stroke: "#1a1a24", strokeWidth: 3, strokeLinecap: "round" }),
+      E("path", { d: "M 125 58 L 106 63", stroke: "#1a1a24", strokeWidth: 3, strokeLinecap: "round" }),
+      E("path", { className: "animate-tear", d: "M 79 78 Q 75 88 79 92 Q 83 88 79 78 Z", fill: "#54a0ff" }),
+      E("path", { className: "animate-tear", d: "M 121 78 Q 117 88 121 92 Q 125 88 121 78 Z", fill: "#54a0ff", style: { animationDelay: ".5s" } })
     );
   }
   if (pose === "sleeping") {
-    return E("g", { stroke: "#2c3e50", strokeWidth: "3", strokeLinecap: "round" },
-      E("path", { d: "M 76 68 Q 85 75 94 68", fill: "none" }),
-      E("path", { d: "M 106 68 Q 115 75 124 68", fill: "none" }),
-      E("text", { x: "138", y: "42", fontSize: "15", fill: "#7FA37A", fontWeight: "bold" }, "zzz...")
+    return E("g", { stroke: "#2c3e50", strokeWidth: "3.2", strokeLinecap: "round" },
+      E("path", { d: "M 75 68 Q 85 76 95 68", fill: "none" }),
+      E("path", { d: "M 105 68 Q 115 76 125 68", fill: "none" }),
+      E("text", { x: "136", y: "42", fontSize: "16", fill: "#7FA37A", fontWeight: "bold" }, "zzz...")
     );
   }
   if (pose === "determined") {
     return E("g", null,
-      E("ellipse", { cx: 85, cy: 67, rx: 7.5, ry: 9, fill: "#1e272e" }),
-      E("ellipse", { cx: 115, cy: 67, rx: 7.5, ry: 9, fill: "#1e272e" }),
+      E("ellipse", { cx: 85, cy: 67, rx: 8, ry: 10, fill: "#1a1a24" }),
+      E("ellipse", { cx: 115, cy: 67, rx: 8, ry: 10, fill: "#1a1a24" }),
       E("circle", { cx: 87, cy: 64, r: 3.5, fill: "#ffffff" }),
       E("circle", { cx: 117, cy: 64, r: 3.5, fill: "#ffffff" }),
-      E("path", { d: "M 74 58 L 94 63", stroke: "#1e272e", strokeWidth: 3, strokeLinecap: "round" }),
-      E("path", { d: "M 126 58 L 106 63", stroke: "#1e272e", strokeWidth: 3, strokeLinecap: "round" })
+      E("path", { d: "M 73 57 L 94 62", stroke: "#1a1a24", strokeWidth: 3.2, strokeLinecap: "round" }),
+      E("path", { d: "M 127 57 L 106 62", stroke: "#1a1a24", strokeWidth: 3.2, strokeLinecap: "round" })
     );
   }
-  // Kawaii normal sparkling eyes
+  // Kawaii normal anime sparkling eyes with double highlight & iris glow
   return E("g", null,
-    E("ellipse", { cx: 85, cy: 66, rx: 7.5, ry: 9.5, fill: "#1e272e" }),
-    E("ellipse", { cx: 115, cy: 66, rx: 7.5, ry: 9.5, fill: "#1e272e" }),
-    E("circle", { cx: 83, cy: 62.5, r: 3.2, fill: "#ffffff" }),
-    E("circle", { cx: 113, cy: 62.5, r: 3.2, fill: "#ffffff" }),
-    E("circle", { cx: 88, cy: 70, r: 1.6, fill: "#ffffff" }),
-    E("circle", { cx: 118, cy: 70, r: 1.6, fill: "#ffffff" }),
-    E("path", { d: "M 77 62 Q 85 57 93 61", stroke: "#1e272e", strokeWidth: "1.5", strokeLinecap: "round", fill: "none" }),
-    E("path", { d: "M 123 62 Q 115 57 107 61", stroke: "#1e272e", strokeWidth: "1.5", strokeLinecap: "round", fill: "none" })
+    E("ellipse", { cx: 85, cy: 66, rx: 8.5, ry: 10.5, fill: "#1a1a24" }),
+    E("ellipse", { cx: 115, cy: 66, rx: 8.5, ry: 10.5, fill: "#1a1a24" }),
+    // Iris reflection curve
+    E("path", { d: "M 79 68 Q 85 74 91 68", stroke: "#55efc4", strokeWidth: 1.5, fill: "none", opacity: 0.6 }),
+    E("path", { d: "M 109 68 Q 115 74 121 68", stroke: "#55efc4", strokeWidth: 1.5, fill: "none", opacity: 0.6 }),
+    // Primary big glossy shine
+    E("circle", { cx: 82.5, cy: 62.5, r: 3.5, fill: "#ffffff" }),
+    E("circle", { cx: 112.5, cy: 62.5, r: 3.5, fill: "#ffffff" }),
+    // Secondary cute bottom-right sparkle
+    E("circle", { cx: 88, cy: 70, r: 1.8, fill: "#ffffff" }),
+    E("circle", { cx: 118, cy: 70, r: 1.8, fill: "#ffffff" }),
+    // Gentle eyelid arc
+    E("path", { d: "M 76 61 Q 85 55 94 60", stroke: "#1a1a24", strokeWidth: "1.8", strokeLinecap: "round", fill: "none" }),
+    E("path", { d: "M 124 61 Q 115 55 106 60", stroke: "#1a1a24", strokeWidth: "1.8", strokeLinecap: "round", fill: "none" })
   );
 }
 
 function CuteMouth(mood) {
   if (mood === "good") {
     return E("g", null,
-      E("path", { d: "M 93 78 Q 100 89 107 78 Z", fill: "#e84118", stroke: "#2c3e50", strokeWidth: 2, strokeLinejoin: "round" }),
-      E("ellipse", { cx: 100, cy: 83, rx: 4, ry: 2.5, fill: "#ff7979" })
+      E("path", { d: "M 92 78 Q 100 90 108 78 Z", fill: "#e84118", stroke: "#2c3e50", strokeWidth: 2, strokeLinejoin: "round" }),
+      E("ellipse", { cx: 100, cy: 84, rx: 4, ry: 2.5, fill: "#ff7979" })
     );
   }
   if (mood === "bad" || mood === "sad") {
-    return E("path", { d: "M 93 84 Q 100 76 107 84", fill: "none", stroke: "#2c3e50", strokeWidth: 2.5, strokeLinecap: "round" });
+    return E("path", { d: "M 93 84 Q 100 76 107 84", fill: "none", stroke: "#2c3e50", strokeWidth: 2.6, strokeLinecap: "round" });
   }
-  // Sweet gentle "w" curve
-  return E("path", { d: "M 94 77 Q 97 81 100 78 Q 103 81 106 77", fill: "none", stroke: "#2c3e50", strokeWidth: 2.2, strokeLinecap: "round" });
+  // Sweet "w" cat-like smile
+  return E("path", { d: "M 93 77 Q 96.5 81.5 100 78 Q 103.5 81.5 107 77", fill: "none", stroke: "#2c3e50", strokeWidth: 2.4, strokeLinecap: "round" });
 }
 
 function FullBodyAnimal({ pet, scale = 1, onClick, reaction }) {
@@ -658,8 +594,9 @@ function FullBodyAnimal({ pet, scale = 1, onClick, reaction }) {
     className: "relative cursor-pointer select-none flex flex-col items-center justify-center group transition-transform active:scale-95",
     style: { width: 220 * scale, height: 260 * scale }
   },
+    // Quote speech bubble
     (reaction?.msg || currentQuote) && E("div", {
-      className: "absolute -top-14 z-30 bg-parchment-50 text-forest-950 border-2 border-forest-800 px-3.5 py-2 rounded-2xl text-xs font-bold font-fredoka shadow-xl max-w-[220px] text-center animate-bounce leading-tight"
+      className: "absolute -top-14 z-30 bg-parchment-50 text-forest-950 border-2 border-forest-800 px-4 py-2 rounded-2xl text-xs font-bold font-fredoka shadow-2xl max-w-[220px] text-center animate-bounce leading-tight"
     },
       reaction?.msg || currentQuote,
       E("div", { className: "absolute left-1/2 -bottom-2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-l-transparent border-r-transparent border-t-forest-800" })
@@ -680,136 +617,144 @@ function FullBodyAnimal({ pet, scale = 1, onClick, reaction }) {
           E("stop", { offset: "0%", stopColor: palette.primary }),
           E("stop", { offset: "100%", stopColor: palette.secondary })
         ),
-        E("radialGradient", { id: `grad_head_${pet.colorId}`, cx: "45%", cy: "40%", r: "60%" },
-          E("stop", { offset: "0%", stopColor: palette.primary }),
+        E("radialGradient", { id: `grad_head_${pet.colorId}`, cx: "45%", cy: "40%", r: "65%" },
+          E("stop", { offset: "0%", stopColor: palette.highlight || palette.primary }),
+          E("stop", { offset: "50%", stopColor: palette.primary }),
           E("stop", { offset: "100%", stopColor: palette.secondary })
         ),
-        E("filter", { id: "softShadow", x: "-20%", y: "-20%", width: "140%", height: "140%" },
-          E("feDropShadow", { dx: "0", dy: "5", stdDeviation: "2.5", floodColor: "#0e241f", floodOpacity: "0.3" })
+        E("filter", { id: "softDepth", x: "-20%", y: "-20%", width: "140%", height: "140%" },
+          E("feDropShadow", { dx: "0", dy: "6", stdDeviation: "3", floodColor: "#071512", floodOpacity: "0.35" })
         )
       ),
-      E("g", { filter: "url(#softShadow)" },
+      E("g", { filter: "url(#softDepth)" },
         // Auras
         eq.aura === "aura_stars" && E("g", { className: "animate-aura" },
-          E("circle", { cx: 100, cy: 110, r: 85, fill: "none", stroke: "#E8A33D", strokeWidth: 4, strokeDasharray: "8 8", opacity: 0.6 }),
-          E("text", { x: 18, y: 40, fontSize: 20 }, "✨"),
-          E("text", { x: 162, y: 160, fontSize: 20 }, "⭐"),
-          E("text", { x: 165, y: 50, fontSize: 18 }, "✨")
+          E("circle", { cx: 100, cy: 110, r: 85, fill: "none", stroke: "#E8A33D", strokeWidth: 4, strokeDasharray: "8 8", opacity: 0.65 }),
+          E("text", { x: 18, y: 38, fontSize: 22 }, "✨"),
+          E("text", { x: 162, y: 160, fontSize: 22 }, "⭐"),
+          E("text", { x: 165, y: 48, fontSize: 20 }, "✨")
         ),
         eq.aura === "aura_fire" && E("g", { className: "animate-aura" },
           E("circle", { cx: 100, cy: 115, r: 80, fill: "none", stroke: "#E85D4C", strokeWidth: 5, strokeDasharray: "12 6", opacity: 0.7 }),
-          E("text", { x: 15, y: 110, fontSize: 22 }, "🔥"),
-          E("text", { x: 165, y: 110, fontSize: 22 }, "🔥")
+          E("text", { x: 14, y: 110, fontSize: 24 }, "🔥"),
+          E("text", { x: 166, y: 110, fontSize: 24 }, "🔥")
         ),
         eq.aura === "aura_bubbles" && E("g", { className: "animate-aura" },
-          E("circle", { cx: 25, cy: 80, r: 14, fill: "#7FA37A", opacity: 0.35 }),
-          E("circle", { cx: 172, cy: 60, r: 18, fill: "#7FA37A", opacity: 0.3 }),
-          E("circle", { cx: 30, cy: 140, r: 10, fill: "#7FA37A", opacity: 0.25 })
+          E("circle", { cx: 25, cy: 75, r: 15, fill: "#7FA37A", opacity: 0.35 }),
+          E("circle", { cx: 174, cy: 55, r: 18, fill: "#7FA37A", opacity: 0.3 }),
+          E("circle", { cx: 28, cy: 140, r: 12, fill: "#7FA37A", opacity: 0.25 })
         ),
         eq.aura === "aura_leaves" && E("g", { className: "animate-aura" },
-          E("text", { x: 22, y: 55, fontSize: 20 }, "🍃"),
-          E("text", { x: 162, y: 140, fontSize: 20 }, "🌿"),
-          E("text", { x: 165, y: 65, fontSize: 18 }, "🌸")
+          E("text", { x: 20, y: 50, fontSize: 22 }, "🍃"),
+          E("text", { x: 162, y: 140, fontSize: 22 }, "🌿"),
+          E("text", { x: 165, y: 65, fontSize: 20 }, "🌸")
         ),
 
-        // Tails & Back Elements
+        // Tails & Back Species Features
         pet.species === "zorro" && E("g", null,
-          E("path", { d: "M 135 125 C 190 100, 185 165, 145 165 C 130 165, 120 145, 135 125 Z", fill: palette.secondary }),
-          E("path", { d: "M 165 118 C 185 130, 180 155, 155 162 Z", fill: "#FFFDF7" })
+          E("path", { d: "M 132 125 C 195 95, 190 170, 142 165 C 128 165, 118 145, 132 125 Z", fill: palette.secondary }),
+          E("path", { d: "M 166 116 C 188 128, 184 158, 154 163 Z", fill: palette.belly })
         ),
         pet.species === "dragon" && E("g", null,
           E("path", { d: "M 48 112 Q 15 80, 38 140 Z", fill: palette.secondary }),
           E("path", { d: "M 152 112 Q 185 80, 162 140 Z", fill: palette.secondary }),
           E("path", { d: "M 130 140 Q 170 170, 142 182 Z", fill: palette.secondary }),
-          E("path", { d: "M 148 175 L 158 185 L 140 186 Z", fill: "#E8A33D" })
+          E("path", { d: "M 148 175 L 160 185 L 140 186 Z", fill: "#E8A33D" })
         ),
         pet.species === "gatito" && E("g", null,
-          E("path", { d: "M 135 155 C 185 150, 185 105, 170 95", stroke: palette.secondary, strokeWidth: 10, strokeLinecap: "round", fill: "none" })
+          E("path", { d: "M 135 155 C 188 152, 188 100, 168 90", stroke: palette.secondary, strokeWidth: 11, strokeLinecap: "round", fill: "none" })
         ),
         pet.species === "lobito" && E("g", null,
-          E("path", { d: "M 135 130 C 195 120, 185 175, 135 155 Z", fill: palette.secondary }),
-          E("path", { d: "M 165 130 C 185 145, 175 168, 155 160 Z", fill: "#FFFDF7" })
+          E("path", { d: "M 135 128 C 196 116, 188 178, 136 156 Z", fill: palette.secondary }),
+          E("path", { d: "M 165 128 C 186 142, 178 170, 156 160 Z", fill: palette.belly })
         ),
         pet.species === "conejito" && E("g", null,
-          E("circle", { cx: 142, cy: 156, r: 12, fill: "#FFFDF7", stroke: palette.secondary, strokeWidth: 2 })
+          E("circle", { cx: 142, cy: 156, r: 13, fill: palette.belly, stroke: palette.secondary, strokeWidth: 2 })
         ),
         (pet.species === "osito" || pet.species === "panda") && E("g", null,
-          E("circle", { cx: 145, cy: 165, r: 12, fill: palette.secondary })
+          E("circle", { cx: 146, cy: 165, r: 13, fill: palette.secondary })
         ),
         pet.species === "pinguino" && E("g", null,
-          E("path", { d: "M 60 115 Q 26 138, 48 172 Q 62 160, 62 140 Z", fill: palette.secondary }),
-          E("path", { d: "M 140 115 Q 174 138, 152 172 Q 138 160, 138 140 Z", fill: palette.secondary })
+          E("path", { d: "M 58 115 Q 24 138, 48 172 Q 62 160, 62 140 Z", fill: palette.secondary }),
+          E("path", { d: "M 142 115 Q 176 138, 152 172 Q 138 160, 138 140 Z", fill: palette.secondary })
         ),
         pet.species === "axolote" && E("g", null,
-          E("path", { d: "M 135 148 Q 186 142, 178 175 Q 148 182, 130 168 Z", fill: palette.secondary })
+          E("path", { d: "M 134 148 Q 188 142, 180 176 Q 148 184, 128 168 Z", fill: palette.secondary })
         ),
 
         // Hero Cape
-        eq.body === "cape_hero" && E("path", { d: "M 58 90 L 142 90 L 158 185 L 42 185 Z", fill: "#E85D4C" }),
+        eq.body === "hero_cape" && E("path", { d: "M 56 90 L 144 90 L 160 185 L 40 185 Z", fill: "#E85D4C" }),
+        eq.body === "fairy_wings" && E("g", { fill: "#a29bfe", opacity: 0.75 },
+          E("ellipse", { cx: 40, cy: 100, rx: 25, ry: 15, transform: "rotate(-30 40 100)" }),
+          E("ellipse", { cx: 160, cy: 100, rx: 25, ry: 15, transform: "rotate(30 160 100)" })
+        ),
 
-        // Feet & Paws
+        // Ground Paws
         E("ellipse", { cx: 75, cy: 182, rx: 16, ry: 9, fill: palette.secondary }),
         E("ellipse", { cx: 125, cy: 182, rx: 16, ry: 9, fill: palette.secondary }),
         E("ellipse", { cx: 75, cy: 183, rx: 12, ry: 6, fill: palette.belly, opacity: 0.7 }),
         E("ellipse", { cx: 125, cy: 183, rx: 12, ry: 6, fill: palette.belly, opacity: 0.7 }),
 
-        // Main Body (Round, cuddly chibi shape)
+        // Body with organic curved shape
         E("path", {
-          d: "M 60 92 C 48 135, 48 172, 75 180 C 90 184, 110 184, 125 180 C 152 172, 152 135, 140 92 Z",
+          d: "M 60 92 C 46 135, 46 172, 75 180 C 90 184, 110 184, 125 180 C 154 172, 154 135, 140 92 Z",
           fill: `url(#grad_body_${pet.colorId})`
         }),
         // Belly Patch
-        E("ellipse", { cx: 100, cy: 138, rx: 28, ry: 30, fill: palette.belly }),
+        E("ellipse", { cx: 100, cy: 138, rx: 29, ry: 31, fill: palette.belly }),
 
         // Costumes on Body
-        eq.body === "vest_adventure" && E("path", { d: "M 62 95 L 138 95 L 134 150 L 66 150 Z", fill: "#E8A33D", rx: 4 }),
-        eq.body === "scarf_cozy" && E("g", null,
-          E("rect", { x: 58, y: 84, width: 84, height: 18, rx: 8, fill: "#E85D4C" }),
-          E("rect", { x: 110, y: 92, width: 18, height: 35, rx: 4, fill: "#c74535" })
+        eq.body === "adventure_vest" && E("path", { d: "M 62 95 L 138 95 L 134 150 L 66 150 Z", fill: "#E8A33D", rx: 4 }),
+        eq.body === "warm_scarf" && E("g", null,
+          E("rect", { x: 56, y: 84, width: 88, height: 18, rx: 9, fill: "#E85D4C" }),
+          E("rect", { x: 110, y: 92, width: 20, height: 38, rx: 5, fill: "#c74535" })
+        ),
+        eq.body === "gold_bell" && E("g", null,
+          E("circle", { cx: 100, cy: 96, r: 8, fill: "#f1c40f", stroke: "#b3741b", strokeWidth: 1.5 })
         ),
 
-        // Arms / Paws
-        E("ellipse", { cx: 54, cy: 122, rx: 11, ry: 18, fill: palette.primary, transform: "rotate(15 54 122)" }),
-        E("ellipse", { cx: 146, cy: 122, rx: 11, ry: 18, fill: palette.primary, transform: "rotate(-15 146 122)" }),
+        // Cute Little Forepaws
+        E("ellipse", { cx: 54, cy: 122, rx: 12, ry: 18, fill: palette.primary, transform: "rotate(15 54 122)" }),
+        E("ellipse", { cx: 146, cy: 122, rx: 12, ry: 18, fill: palette.primary, transform: "rotate(-15 146 122)" }),
 
-        // Head Base
+        // Head Base with radial gradient for soft cheeks
         E("circle", { cx: 100, cy: 70, r: 44, fill: `url(#grad_head_${pet.colorId})` }),
 
         // Species Ears & Facial details
         pet.species === "zorro" && E("g", null,
-          E("polygon", { points: "65,38 48,2 80,28", fill: palette.primary }),
-          E("polygon", { points: "135,38 152,2 120,28", fill: palette.primary }),
-          E("polygon", { points: "64,34 53,10 76,26", fill: "#FFFDF7" }),
-          E("polygon", { points: "136,34 147,10 124,26", fill: "#FFFDF7" })
+          E("polygon", { points: "65,38 46,0 82,28", fill: palette.primary }),
+          E("polygon", { points: "135,38 154,0 118,28", fill: palette.primary }),
+          E("polygon", { points: "64,34 53,8 78,26", fill: palette.belly }),
+          E("polygon", { points: "136,34 147,8 122,26", fill: palette.belly })
         ),
         pet.species === "gatito" && E("g", null,
-          E("polygon", { points: "66,38 54,12 82,30", fill: palette.secondary }),
-          E("polygon", { points: "134,38 146,12 118,30", fill: palette.secondary }),
-          E("polygon", { points: "66,35 58,18 78,28", fill: "#ffb8b8" }),
-          E("polygon", { points: "134,35 142,18 122,28", fill: "#ffb8b8" }),
+          E("polygon", { points: "66,38 52,10 82,30", fill: palette.secondary }),
+          E("polygon", { points: "134,38 148,10 118,30", fill: palette.secondary }),
+          E("polygon", { points: "66,35 57,17 78,28", fill: "#ffb8b8" }),
+          E("polygon", { points: "134,35 143,17 122,28", fill: "#ffb8b8" }),
           // Whiskers
-          E("line", { x1: 58, y1: 76, x2: 40, y2: 73, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
-          E("line", { x1: 58, y1: 80, x2: 42, y2: 82, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
-          E("line", { x1: 142, y1: 76, x2: 160, y2: 73, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
-          E("line", { x1: 142, y1: 80, x2: 158, y2: 82, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" })
+          E("line", { x1: 58, y1: 75, x2: 38, y2: 72, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
+          E("line", { x1: 58, y1: 79, x2: 40, y2: 82, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
+          E("line", { x1: 142, y1: 75, x2: 162, y2: 72, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" }),
+          E("line", { x1: 142, y1: 79, x2: 160, y2: 82, stroke: "#2c3e50", strokeWidth: 1.5, strokeLinecap: "round" })
         ),
         pet.species === "conejito" && E("g", null,
-          E("ellipse", { cx: 75, cy: 16, rx: 10, ry: 28, fill: palette.primary, transform: "rotate(-10 75 16)" }),
-          E("ellipse", { cx: 125, cy: 16, rx: 10, ry: 28, fill: palette.primary, transform: "rotate(10 125 16)" }),
-          E("ellipse", { cx: 75, cy: 16, rx: 5.5, ry: 20, fill: "#ffb8b8", transform: "rotate(-10 75 16)" }),
-          E("ellipse", { cx: 125, cy: 16, rx: 5.5, ry: 20, fill: "#ffb8b8", transform: "rotate(10 125 16)" })
+          E("ellipse", { cx: 74, cy: 14, rx: 11, ry: 30, fill: palette.primary, transform: "rotate(-10 74 14)" }),
+          E("ellipse", { cx: 126, cy: 14, rx: 11, ry: 30, fill: palette.primary, transform: "rotate(10 126 14)" }),
+          E("ellipse", { cx: 74, cy: 14, rx: 6, ry: 22, fill: "#ffb8b8", transform: "rotate(-10 74 14)" }),
+          E("ellipse", { cx: 126, cy: 14, rx: 6, ry: 22, fill: "#ffb8b8", transform: "rotate(10 126 14)" })
         ),
         pet.species === "panda" && E("g", null,
-          E("circle", { cx: 66, cy: 36, r: 13, fill: "#1e272e" }),
-          E("circle", { cx: 134, cy: 36, r: 13, fill: "#1e272e" }),
-          E("ellipse", { cx: 85, cy: 67, rx: 12, ry: 10, fill: "#1e272e" }),
-          E("ellipse", { cx: 115, cy: 67, rx: 12, ry: 10, fill: "#1e272e" })
+          E("circle", { cx: 65, cy: 35, r: 14, fill: "#1a1a24" }),
+          E("circle", { cx: 135, cy: 35, r: 14, fill: "#1a1a24" }),
+          E("ellipse", { cx: 85, cy: 67, rx: 12.5, ry: 10.5, fill: "#1a1a24" }),
+          E("ellipse", { cx: 115, cy: 67, rx: 12.5, ry: 10.5, fill: "#1a1a24" })
         ),
         pet.species === "buho" && E("g", null,
           E("polygon", { points: "72,36 60,16 84,30", fill: palette.secondary }),
           E("polygon", { points: "128,36 140,16 116,30", fill: palette.secondary }),
-          E("circle", { cx: 84, cy: 66, r: 17, fill: palette.belly }),
-          E("circle", { cx: 116, cy: 66, r: 17, fill: palette.belly })
+          E("circle", { cx: 84, cy: 66, r: 18, fill: palette.belly }),
+          E("circle", { cx: 116, cy: 66, r: 18, fill: palette.belly })
         ),
         pet.species === "capibara" && E("g", null,
           E("ellipse", { cx: 64, cy: 32, rx: 9, ry: 7, fill: palette.secondary }),
@@ -819,13 +764,13 @@ function FullBodyAnimal({ pet, scale = 1, onClick, reaction }) {
           E("circle", { cx: 100, cy: 26, r: 9, fill: "#e67e22" }),
           E("path", { d: "M 100 17 Q 103 13, 107 14", stroke: "#27ae60", strokeWidth: 2.5, fill: "none" })
         ),
-        pet.species === "axolote" && E("g", { stroke: "#ff7675", strokeWidth: 5, strokeLinecap: "round", fill: "none" },
-          E("path", { d: "M 58 56 C 30 42, 28 32, 22 28" }),
-          E("path", { d: "M 57 68 C 24 64, 20 62, 14 62" }),
-          E("path", { d: "M 59 80 C 32 88, 28 98, 24 104" }),
-          E("path", { d: "M 142 56 C 170 42, 172 32, 178 28" }),
-          E("path", { d: "M 143 68 C 176 64, 180 62, 186 62" }),
-          E("path", { d: "M 141 80 C 168 88, 172 98, 176 104" })
+        pet.species === "axolote" && E("g", { stroke: "#ff7675", strokeWidth: 5.5, strokeLinecap: "round", fill: "none" },
+          E("path", { d: "M 58 56 C 28 42, 26 30, 20 26" }),
+          E("path", { d: "M 57 68 C 22 64, 18 62, 12 62" }),
+          E("path", { d: "M 59 80 C 30 88, 26 98, 22 104" }),
+          E("path", { d: "M 142 56 C 172 42, 174 30, 180 26" }),
+          E("path", { d: "M 143 68 C 178 64, 182 62, 188 62" }),
+          E("path", { d: "M 141 80 C 170 88, 174 98, 178 104" })
         ),
         pet.species === "dragon" && E("g", null,
           E("path", { d: "M 68 36 L 56 6 L 88 28 Z", fill: "#E8A33D" }),
@@ -835,112 +780,117 @@ function FullBodyAnimal({ pet, scale = 1, onClick, reaction }) {
           E("circle", { cx: 106, cy: 79, r: 2, fill: "#2c3e50" })
         ),
         pet.species === "lobito" && E("g", null,
-          E("polygon", { points: "62,44 52,4 88,30", fill: palette.primary }),
-          E("polygon", { points: "138,44 148,4 112,30", fill: palette.primary }),
-          E("polygon", { points: "64,36 58,16 78,28", fill: palette.secondary }),
-          E("polygon", { points: "136,36 142,16 122,28", fill: palette.secondary }),
-          E("ellipse", { cx: 100, cy: 80, rx: 16, ry: 11, fill: palette.belly })
+          E("polygon", { points: "62,44 50,2 88,30", fill: palette.primary }),
+          E("polygon", { points: "138,44 150,2 112,30", fill: palette.primary }),
+          E("polygon", { points: "64,36 56,14 78,28", fill: palette.belly }),
+          E("polygon", { points: "136,36 144,14 122,28", fill: palette.belly }),
+          E("ellipse", { cx: 100, cy: 80, rx: 17, ry: 12, fill: palette.belly })
         ),
         pet.species === "osito" && E("g", null,
-          E("circle", { cx: 65, cy: 34, r: 13, fill: palette.primary }),
-          E("circle", { cx: 135, cy: 34, r: 13, fill: palette.primary }),
-          E("circle", { cx: 65, cy: 34, r: 7, fill: palette.belly }),
-          E("circle", { cx: 135, cy: 34, r: 7, fill: palette.belly }),
+          E("circle", { cx: 64, cy: 33, r: 14, fill: palette.primary }),
+          E("circle", { cx: 136, cy: 33, r: 14, fill: palette.primary }),
+          E("circle", { cx: 64, cy: 33, r: 7.5, fill: palette.belly }),
+          E("circle", { cx: 136, cy: 33, r: 7.5, fill: palette.belly }),
           E("ellipse", { cx: 100, cy: 80, rx: 17, ry: 12, fill: palette.belly })
         ),
         pet.species === "pinguino" && E("g", null,
-          E("ellipse", { cx: 100, cy: 74, rx: 32, ry: 28, fill: palette.belly }),
+          E("ellipse", { cx: 100, cy: 74, rx: 33, ry: 29, fill: palette.belly }),
           E("polygon", { points: "93,75 107,75 100,85", fill: "#f39c12" })
         ),
 
-        // Expressive Kawaii Eyes
+        // Expressive Anime Eyes
         KawaiiEyes({ mood, pose }),
 
-        // Nose (Cute button nose)
+        // Nose
         pet.species !== "pinguino" && E("polygon", { points: "96,74 104,74 100,79", fill: "#2c3e50" }),
 
-        // Cute Mouth
+        // Sweet Mouth
         CuteMouth(mood),
 
-        // Sweet Blushing Cheeks
-        E("ellipse", { cx: 72, cy: 76, rx: 8, ry: 5, fill: "#ff7675", opacity: 0.45 }),
-        E("ellipse", { cx: 128, cy: 76, rx: 8, ry: 5, fill: "#ff7675", opacity: 0.45 }),
+        // Rosy Blushing Cheeks
+        E("ellipse", { cx: 72, cy: 76, rx: 9, ry: 5.5, fill: palette.blush || "#ff7675", opacity: 0.5 }),
+        E("ellipse", { cx: 128, cy: 76, rx: 9, ry: 5.5, fill: palette.blush || "#ff7675", opacity: 0.5 }),
 
         // Accessories: Head
-        eq.head === "crown_gold" && E("path", { d: "M 72 32 L 82 12 L 100 24 L 118 12 L 128 32 Z", fill: "#E8A33D", stroke: "#ba791b", strokeWidth: 2 }),
+        eq.head === "crown_gold" && E("path", { d: "M 70 32 L 80 10 L 100 24 L 120 10 L 130 32 Z", fill: "#E8A33D", stroke: "#b3741b", strokeWidth: 2 }),
+        eq.head === "flower_bow" && E("g", null,
+          E("text", { x: 110, y: 38, fontSize: 26 }, "🌸"),
+          E("text", { x: 62, y: 38, fontSize: 22 }, "🎀")
+        ),
+        eq.head === "cat_beanie" && E("path", { d: "M 66 38 Q 100 12 134 38 Z", fill: "#e84393" }),
+        eq.head === "cool_glasses" && E("g", { fill: "#1a1a24" },
+          E("rect", { x: 68, y: 58, width: 28, height: 16, rx: 5 }),
+          E("rect", { x: 104, y: 58, width: 28, height: 16, rx: 5 }),
+          E("line", { x1: 96, y1: 65, x2: 104, y2: 65, stroke: "#1a1a24", strokeWidth: 3 })
+        ),
+        eq.head === "headphones_pro" && E("g", { stroke: "#E85D4C", strokeWidth: 5, fill: "none" },
+          E("path", { d: "M 64 65 C 64 22, 136 22, 136 65" }),
+          E("rect", { x: 55, y: 56, width: 14, height: 22, rx: 5, fill: "#1a1a24", stroke: "none" }),
+          E("rect", { x: 131, y: 56, width: 14, height: 22, rx: 5, fill: "#1a1a24", stroke: "none" })
+        ),
         eq.head === "wizard_hat" && E("g", null,
-          E("path", { d: "M 100 0 L 132 36 L 68 36 Z", fill: "#1c423b" }),
-          E("ellipse", { cx: 100, cy: 36, rx: 38, ry: 8, fill: "#14322C" }),
+          E("path", { d: "M 100 -2 L 134 36 L 66 36 Z", fill: "#1b4139" }),
+          E("ellipse", { cx: 100, cy: 36, rx: 40, ry: 8, fill: "#122b25" }),
           E("rect", { x: 84, y: 28, width: 32, height: 8, fill: "#E8A33D" })
         ),
-        eq.head === "sun_glasses" && E("g", { fill: "#0e241f" },
-          E("rect", { x: 70, y: 58, width: 26, height: 16, rx: 4 }),
-          E("rect", { x: 104, y: 58, width: 26, height: 16, rx: 4 }),
-          E("line", { x1: 96, y1: 64, x2: 104, y2: 64, stroke: "#0e241f", strokeWidth: 3 })
-        ),
-        eq.head === "bunny_ears" && E("g", { fill: "#FFFDF7", stroke: "#E85D4C", strokeWidth: 2 },
-          E("ellipse", { cx: 78, cy: 16, rx: 8, ry: 22 }),
-          E("ellipse", { cx: 122, cy: 16, rx: 8, ry: 22 }),
-          E("ellipse", { cx: 78, cy: 16, rx: 4, ry: 15, fill: "#ffb8b8", stroke: "none" }),
-          E("ellipse", { cx: 122, cy: 16, rx: 4, ry: 15, fill: "#ffb8b8", stroke: "none" })
-        ),
-        eq.head === "lucky_flower" && E("text", { x: 115, y: 36, fontSize: 24 }, "🌸"),
-        eq.head === "headphones" && E("g", { stroke: "#E85D4C", strokeWidth: 5, fill: "none" },
-          E("path", { d: "M 64 65 C 64 24, 136 24, 136 65" }),
-          E("rect", { x: 56, y: 56, width: 14, height: 22, rx: 4, fill: "#0e241f", stroke: "none" }),
-          E("rect", { x: 130, y: 56, width: 14, height: 22, rx: 4, fill: "#0e241f", stroke: "none" })
-        ),
-        eq.head === "party_hat" && E("g", null,
+        eq.head === "sprout_clip" && E("text", { x: 92, y: 28, fontSize: 24 }, "🌱"),
+        eq.head === "party_cone" && E("g", null,
           E("polygon", { points: "100,2 118,34 82,34", fill: "#E8A33D" }),
           E("circle", { cx: 100, cy: 2, r: 4, fill: "#E85D4C" })
         ),
 
         // Accessories: Hand
-        eq.hand === "water_bottle" && E("text", { x: 142, y: 132, fontSize: 26 }, "🧊"),
-        eq.hand === "green_apple" && E("text", { x: 142, y: 132, fontSize: 26 }, "🍏"),
-        eq.hand === "open_book" && E("text", { x: 140, y: 132, fontSize: 26 }, "📖"),
-        eq.hand === "wand_magic" && E("g", { transform: "translate(150, 100) rotate(-20)" },
+        eq.hand === "boba_tea" && E("text", { x: 140, y: 132, fontSize: 28 }, "🧋"),
+        eq.hand === "stanley_tumbler" && E("text", { x: 140, y: 132, fontSize: 26 }, "🧊"),
+        eq.hand === "fresh_apple" && E("text", { x: 142, y: 132, fontSize: 26 }, "🍏"),
+        eq.hand === "science_book" && E("text", { x: 140, y: 132, fontSize: 26 }, "📖"),
+        eq.hand === "magic_wand" && E("g", { transform: "translate(150, 100) rotate(-20)" },
           E("rect", { x: 0, y: 0, width: 6, height: 50, fill: "#7A5230", rx: 2 }),
-          E("text", { x: -8, y: -4, fontSize: 18 }, "✨")
+          E("text", { x: -8, y: -4, fontSize: 20 }, "✨")
         ),
+        eq.hand === "dumbbell" && E("text", { x: 140, y: 132, fontSize: 26 }, "🏋️"),
 
-        // Accessories: Companion Pet
-        eq.pet === "pet_butterfly" && E("text", { x: 10, y: 125, fontSize: 26, className: "animate-bounce" }, "🦋"),
-        eq.pet === "pet_bird" && E("text", { x: 10, y: 125, fontSize: 26, className: "animate-bounce" }, "🐦")
+        // Companion
+        eq.pet === "pet_cat" && E("text", { x: 8, y: 125, fontSize: 28, className: "animate-bounce" }, "🐱"),
+        eq.pet === "pet_bird" && E("text", { x: 8, y: 125, fontSize: 26, className: "animate-bounce" }, "🐦"),
+        eq.pet === "pet_ghost" && E("text", { x: 8, y: 125, fontSize: 26, className: "animate-bounce" }, "👻")
       )
     )
   );
 }
 
 function App() {
+  // Google User Profile Simulation
+  const [userProfile, setUserProfile] = useState(() => {
+    const s = lsRaw("ruta_habitos_user");
+    return s ? JSON.parse(s) : null;
+  });
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  // Pet Profile
   const [pet, setPet] = useState(() => {
     const saved = lsRaw("ruta_habitos_pet");
     return saved ? JSON.parse(saved) : {
-      name: "Kira",
-      title: "Compañera Fiel",
+      name: "Mochi",
+      title: "Explorador de Bienestar",
       species: "zorro",
       personality: "alegre",
       colorId: "amber",
       pose: "happy",
       level: 1,
       xp: 0,
-      coins: 60,
+      coins: 80,
       happiness: 85,
       energy: 90,
-      equipped: { head: null, body: null, hand: "water_bottle", aura: null, pet: null },
-      inventory: ["crown_gold", "water_bottle", "green_apple"]
+      equipped: { head: null, body: null, hand: "stanley_tumbler", aura: null, pet: null },
+      inventory: ["crown_gold", "stanley_tumbler", "fresh_apple"]
     };
   });
 
+  // Habits List
   const [habits, setHabits] = useState(() => {
     const saved = lsRaw("ruta_habitos_list");
-    return saved ? JSON.parse(saved) : [
-      { id: "h1", type: "habit", title: "Beber Vaso de Agua Fresca 💧", positive: true, negative: false, streak: 3 },
-      { id: "h2", type: "habit", title: "Consumir Alimentos Ultraprocesados 🍔", positive: false, negative: true, streak: 0 },
-      { id: "d1", type: "daily", title: "30 Minutos de Caminata o Deporte Activo", done: false, streak: 5 },
-      { id: "d2", type: "daily", title: "Desayunar Fruta y Proteína Saludable", done: false, streak: 4 },
-      { id: "d3", type: "daily", title: "Dormir al Menos 8 Horas Continuas 🌙", done: false, streak: 2 }
-    ];
+    return saved ? JSON.parse(saved) : PRESET_HABITS;
   });
 
   const [activeTab, setActiveTab] = useState("tasks");
@@ -951,35 +901,42 @@ function App() {
   const reactTimer = useRef(null);
   const [soundOn, setSoundOn] = useState(() => lsRaw("ruta_habitos_sound") !== "false");
 
-  // Nutrition search and filter state
-  const [foodSearch, setFoodSearch] = useState("");
-  const [foodCategory, setFoodCategory] = useState("all");
-
-  // Water calculator state
-  const [userWeight, setUserWeight] = useState(55);
+  // Nutrition Calculator State
+  const [userWeight, setUserWeight] = useState(58);
+  const [userHeight, setUserHeight] = useState(165);
+  const [userAge, setUserAge] = useState(16);
   const [userActive, setUserActive] = useState("moderate");
-  const [glassesDrunk, setGlassesDrunk] = useState(() => {
-    const s = lsRaw("ruta_habitos_water_" + todayKey());
-    return s ? Number(s) : 0;
-  });
 
-  // Reminders state
+  // Library & FAQ Search
+  const [librarySearch, setLibrarySearch] = useState("");
+  const [libraryFilter, setLibraryFilter] = useState("all");
+  const [expandedFaq, setExpandedFaq] = useState(null);
+
+  // Quiz State
+  const [quizIdx, setQuizIdx] = useState(0);
+  const [selectedOpt, setSelectedOpt] = useState(null);
+  const [quizAnswered, setQuizAnswered] = useState(false);
+  const [quizScore, setQuizScore] = useState(0);
+
+  // Reminders
   const [reminders, setReminders] = useState(() => {
     const saved = lsRaw("ruta_habitos_reminders");
     return saved ? JSON.parse(saved) : [
-      { id: "r1", time: "08:00", title: "¡Buen día! Tomá un gran vaso de agua y estirá 💧", active: true },
-      { id: "r2", time: "13:00", title: "Momento del almuerzo con vegetales de colores 🥗", active: true },
-      { id: "r3", time: "22:00", title: "Hora de apagar pantallas y preparar el sueño 🌙", active: true }
+      { id: "r1", time: "08:00", title: "🌅 Luz solar matutina + 1 vaso de agua fresca", bio: "Frena la melatonina e inicia el ciclo circadiano de vigilia", active: true },
+      { id: "r2", time: "11:30", title: "🧘 Pausa activa: 5 minutos de respiración y estiramiento", bio: "Baja la tensión cervical y estimula la irrigación cerebral", active: true },
+      { id: "r3", time: "13:30", title: "🥗 Almuerzo con 50% de vegetales de colores", bio: "Combustible celular estable sin pesadez ni picos de glucosa", active: true },
+      { id: "r4", time: "17:00", title: "🍏 Snack inteligente: Fruta o semillas", bio: "Evita la caída de glucosa vespertina y la ansiedad por dulces", active: true },
+      { id: "r5", time: "22:00", title: "🌙 Apagar pantallas y preparar 8 horas de sueño", bio: "Permite que la glándula pineal libere melatonina sin interferencia", active: true }
     ];
   });
   const [newRTime, setNewRTime] = useState("09:00");
   const [newRTitle, setNewRTitle] = useState("");
-  const [alertR, setAlertR] = useState(null);
+  const [newRBio, setNewRBio] = useState("");
 
+  useEffect(() => { lsSet("ruta_habitos_user", userProfile); }, [userProfile]);
   useEffect(() => { lsSet("ruta_habitos_pet", pet); }, [pet]);
   useEffect(() => { lsSet("ruta_habitos_list", habits); }, [habits]);
   useEffect(() => { lsSet("ruta_habitos_reminders", reminders); }, [reminders]);
-  useEffect(() => { lsSet("ruta_habitos_water_" + todayKey(), glassesDrunk); }, [glassesDrunk]);
 
   function triggerToast(msg) {
     setToastMessage(msg);
@@ -989,7 +946,7 @@ function App() {
   function triggerReaction(type, msg) {
     setPetReaction({ type, msg, id: Date.now() });
     clearTimeout(reactTimer.current);
-    reactTimer.current = setTimeout(() => setPetReaction(null), 3000);
+    reactTimer.current = setTimeout(() => setPetReaction(null), 3200);
   }
 
   function toggleSound() {
@@ -1002,34 +959,57 @@ function App() {
 
   function launchConfetti() {
     if (typeof confetti === "function") {
-      confetti({ particleCount: 70, spread: 75, origin: { y: 0.6 } });
+      confetti({ particleCount: 75, spread: 80, origin: { y: 0.6 } });
     }
   }
+
+  // Google Login Flow Simulation
+  const handleGoogleLogin = (email, name) => {
+    sfx.good();
+    const user = {
+      name: name || "Estudiante ETec",
+      email: email || "n.fischer@alumno.etec.um.edu.ar",
+      avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=" + encodeURIComponent(name || "Noa"),
+      syncedAt: new Date().toLocaleTimeString()
+    };
+    setUserProfile(user);
+    setShowAuthModal(false);
+    launchConfetti();
+    triggerToast(`👋 ¡Sesión iniciada como ${user.name}! Progreso sincronizado.`);
+  };
+
+  const handleLogout = () => {
+    sfx.tap();
+    setUserProfile(null);
+    triggerToast("Sesión cerrada (tus datos siguen guardados localmente).");
+  };
 
   const handleCompleteHabit = (id, isPositive = true) => {
     const target = habits.find((x) => x.id === id);
     if (isPositive && target && target.type === "daily" && target.done) {
-      triggerToast("✅ Ya cumpliste esta misión hoy");
+      triggerToast("✅ Ya completaste esta rutina hoy");
       return;
     }
 
     if (isPositive) {
       launchConfetti();
-      const earnedXp = 15;
-      const earnedCoins = 10;
+      const earnedXp = 20;
+      const earnedCoins = 15;
       const willLevel = pet.xp + earnedXp >= pet.level * 60;
       const nextStreak = (target?.streak || 0) + 1;
-      const milestone = [3, 7, 14, 30].includes(nextStreak);
 
       if (willLevel) {
         sfx.levelup();
         triggerReaction("good", `🎉 ¡Subí a Nivel ${pet.level + 1}!`);
-      } else if (milestone) {
-        sfx.levelup();
-        triggerReaction("good", `🔥 ¡${nextStreak} días seguidos! +25 🪙`);
       } else {
         sfx.good();
-        const cheers = ["¡Excelente elección! 💖", "¡Tus células te lo agradecen! 🌟", "¡Qué buena constancia! 💪", "¡Genial! 🥑", "¡Así se hace! ✨"];
+        const cheers = [
+          "¡Tus células te agradecen! 🌟",
+          "¡Dopamina buena para tu cerebro! 🧠",
+          "¡Excelente hábito cumplido! 💪",
+          "¡Qué bien se siente cuidarse! ✨",
+          "¡Sos un ejemplo de constancia! 💖"
+        ];
         triggerReaction("good", cheers[Math.floor(Math.random() * cheers.length)]);
       }
 
@@ -1037,7 +1017,7 @@ function App() {
         let newXp = prev.xp + earnedXp;
         let newLevel = prev.level;
         let xpNeeded = newLevel * 60;
-        let newHappiness = Math.min(100, prev.happiness + 6);
+        let newHappiness = Math.min(100, prev.happiness + 5);
         if (newXp >= xpNeeded) {
           newLevel += 1;
           newXp -= xpNeeded;
@@ -1049,7 +1029,7 @@ function App() {
           ...prev,
           level: newLevel,
           xp: newXp,
-          coins: prev.coins + earnedCoins + (milestone ? 25 : 0),
+          coins: prev.coins + earnedCoins,
           totalDone: (prev.totalDone || 0) + 1,
           history: { ...(prev.history || {}), [todayKey()]: ((prev.history || {})[todayKey()] || 0) + 1 },
           happiness: newHappiness
@@ -1067,7 +1047,7 @@ function App() {
       sfx.bad();
       setPet((prev) => ({ ...prev, happiness: Math.max(10, prev.happiness - 10) }));
       triggerToast(`💔 La felicidad de ${pet.name} disminuyó un poco.`);
-      triggerReaction("bad", "Ay... no pasa nada, ¡mañana elegimos mejor! 🥺");
+      triggerReaction("bad", "Ay... no pasa nada, ¡mañana lo hacemos mejor! 🥺");
       setHabits((prev) => prev.map((x) => (x.id === id ? { ...x, streak: 0 } : x)));
     }
   };
@@ -1076,32 +1056,17 @@ function App() {
     if (!newTitle.trim()) return;
     setHabits((prev) => [
       ...prev,
-      { id: "custom_" + Date.now(), type: newType, title: newTitle.trim(), positive: true, negative: false, streak: 0, done: false }
+      { id: "custom_" + Date.now(), type: newType, title: newTitle.trim(), positive: true, negative: false, streak: 0, done: false, category: "Personalizado", bio: "Hábito elegido por vos para tu salud diaria." }
     ]);
     setNewTitle("");
     sfx.tap();
-    triggerToast("✨ Misión añadida con éxito");
-  };
-
-  const handleAddFoodAsHabit = (food) => {
-    const exists = habits.some((h) => h.title.includes(food.title));
-    if (exists) {
-      triggerToast("ℹ️ Esta comida ya está en tus misiones");
-      return;
-    }
-    setHabits((prev) => [
-      ...prev,
-      { id: "food_" + Date.now(), type: "daily", title: `Comer: ${food.title}`, positive: true, negative: false, streak: 0, done: false }
-    ]);
-    sfx.good();
-    triggerToast(`🥑 ¡"${food.title}" sumado a tus hábitos de hoy!`);
-    setActiveTab("tasks");
+    triggerToast("✨ Nuevo hábito añadido a tu lista");
   };
 
   const handleBuyItem = (item) => {
     if (pet.coins < item.price) {
       sfx.bad();
-      triggerToast("❌ Monedas insuficientes");
+      triggerToast("❌ Monedas insuficientes. ¡Cumplí hábitos o jugá el Quiz!");
       return;
     }
     setPet((prev) => ({
@@ -1111,7 +1076,7 @@ function App() {
       equipped: { ...prev.equipped, [item.slot]: item.id }
     }));
     sfx.coin();
-    triggerToast(`🛍️ Compraste y equipaste ${item.name}`);
+    triggerToast(`🛍️ ¡Compraste y equipaste ${item.name}!`);
   };
 
   const handleToggleEquip = (item) => {
@@ -1128,12 +1093,12 @@ function App() {
   const feedPet = () => {
     if (pet.coins < 8) {
       sfx.bad();
-      triggerToast("❌ Necesitás 8 monedas para alimentar a tu mascota");
+      triggerToast("❌ Necesitás 8 monedas para alimentar a tu compañero");
       return;
     }
     if (pet.happiness >= 100) {
       sfx.tap();
-      triggerToast(`😋 ${pet.name} ya está llena de felicidad`);
+      triggerToast(`😋 ${pet.name} ya está en su máxima felicidad`);
       return;
     }
     sfx.good();
@@ -1142,78 +1107,124 @@ function App() {
     triggerToast(`+15% Felicidad para ${pet.name}`);
   };
 
-  // Water target calculation
-  const recommendedLiters = useMemo(() => {
-    let base = userWeight * 0.035;
-    if (userActive === "moderate") base += 0.4;
-    if (userActive === "intense") base += 0.8;
-    return Math.max(1.5, Math.round(base * 10) / 10);
-  }, [userWeight, userActive]);
+  // Calculations for Nutrition Tab
+  const metabolicCalc = useMemo(() => {
+    // Mifflin-St Jeor Formula
+    const bmr = 10 * userWeight + 6.25 * userHeight - 5 * userAge - 161;
+    const actMultiplier = { light: 1.2, moderate: 1.45, intense: 1.7 }[userActive] || 1.45;
+    const tdee = Math.round(bmr * actMultiplier);
 
-  const totalGlassesGoal = useMemo(() => Math.round(recommendedLiters / 0.25), [recommendedLiters]);
+    // Protein: 1.4g per kg
+    const proteinGrams = Math.round(userWeight * 1.4);
+    // Fats: 0.9g per kg
+    const fatGrams = Math.round(userWeight * 0.9);
+    // Carbs: remainder of calories / 4
+    const carbGrams = Math.max(120, Math.round((tdee - (proteinGrams * 4 + fatGrams * 9)) / 4));
+    // Water
+    const waterLiters = Math.round((userWeight * 0.035 + (userActive === "intense" ? 0.8 : 0.4)) * 10) / 10;
+    // Fiber: ~14g per 1000 kcal
+    const fiberGrams = Math.round((tdee / 1000) * 14);
 
-  const handleToggleGlass = (idx) => {
-    sfx.bubble();
-    if (idx < glassesDrunk) {
-      setGlassesDrunk(idx);
+    return { tdee, proteinGrams, fatGrams, carbGrams, waterLiters, fiberGrams };
+  }, [userWeight, userHeight, userAge, userActive]);
+
+  // Quiz Handling
+  const handleAnswerQuiz = (selected) => {
+    if (quizAnswered) return;
+    setSelectedOpt(selected);
+    setQuizAnswered(true);
+    const q = QUIZ_QUESTIONS[quizIdx];
+    if (selected === q.correct) {
+      launchConfetti();
+      sfx.levelup();
+      setQuizScore((s) => s + 1);
+      setPet((p) => ({ ...p, coins: p.coins + 20, xp: p.xp + 25 }));
+      triggerToast("🎉 ¡Correcto! +20 Monedas 🪙 y +25 XP");
     } else {
-      const next = idx + 1;
-      setGlassesDrunk(next);
-      if (next >= totalGlassesGoal) {
-        launchConfetti();
-        sfx.levelup();
-        triggerReaction("good", "🌊 ¡Meta diaria de agua alcanzada! Células felices 💧");
-        setPet((p) => ({ ...p, coins: p.coins + 15, xp: p.xp + 20 }));
-        triggerToast("🎉 ¡Meta de hidratación completada! +15 Monedas");
-      }
+      sfx.bad();
+      triggerToast("❌ No era esa, ¡leé la explicación científica!");
     }
   };
 
-  // Filtered foods
-  const filteredFoods = useMemo(() => {
-    return HEALTH_FOODS.filter((f) => {
-      const matchCat = foodCategory === "all" || f.category === foodCategory;
-      const matchSearch = foodSearch.trim() === "" ||
-        f.title.toLowerCase().includes(foodSearch.toLowerCase()) ||
-        f.bioExplanation.toLowerCase().includes(foodSearch.toLowerCase()) ||
-        f.micronutrients.some((m) => m.toLowerCase().includes(foodSearch.toLowerCase()));
+  const nextQuiz = () => {
+    sfx.tap();
+    setQuizAnswered(false);
+    setSelectedOpt(null);
+    setQuizIdx((prev) => (prev + 1) % QUIZ_QUESTIONS.length);
+  };
+
+  // Filtered FAQ Library
+  const filteredFaqs = useMemo(() => {
+    return BIOLOGY_LIBRARY.filter((faq) => {
+      const matchCat = libraryFilter === "all" || faq.category === libraryFilter;
+      const matchSearch = librarySearch.trim() === "" ||
+        faq.title.toLowerCase().includes(librarySearch.toLowerCase()) ||
+        faq.body.toLowerCase().includes(librarySearch.toLowerCase());
       return matchCat && matchSearch;
     });
-  }, [foodCategory, foodSearch]);
+  }, [libraryFilter, librarySearch]);
 
   return E("div", { className: "max-w-5xl mx-auto px-3 sm:px-6 py-6 space-y-6" },
-    // Header
-    E("header", { className: "flex flex-col md:flex-row justify-between items-center bg-forest-800 text-parchment-100 p-5 rounded-3xl border-2 border-forest-600 card-3d gap-4" },
-      E("div", { className: "flex items-center gap-3.5" },
-        E("span", { className: "text-3xl p-2 bg-forest-900/60 rounded-2xl border border-forest-600" }, "🐾"),
-        E("div", null,
-          E("div", { className: "flex items-center gap-2" },
-            E("h1", { className: "font-fredoka text-2xl md:text-3xl font-bold text-gold tracking-wide" }, "Ruta de Hábitos"),
-            E("span", { className: "bg-sage-dark text-parchment-100 text-[10px] font-bold px-2 py-0.5 rounded-full" }, "ETec UM")
-          ),
-          E("p", { className: "text-xs text-sage-light font-semibold" }, "Compañeros de Bienestar RPG · Clase de Biología (3° Informática)"),
-          E("p", { className: "text-[11px] text-parchment-300 font-bold mt-0.5" }, "💾 Guardado automático en tu navegador")
+    // Google Sign-In Bar & Header
+    E("header", { className: "bg-forest-800 text-parchment-100 p-5 rounded-3xl border-2 border-forest-600 card-3d space-y-4" },
+      E("div", { className: "flex flex-col sm:flex-row justify-between items-center gap-4" },
+        E("div", { className: "flex items-center gap-3.5" },
+          E("span", { className: "text-3xl p-2.5 bg-forest-900/80 rounded-2xl border border-forest-600" }, "🐾"),
+          E("div", null,
+            E("div", { className: "flex items-center gap-2" },
+              E("h1", { className: "font-fredoka text-2xl sm:text-3xl font-bold text-gold tracking-wide" }, "Ruta de Hábitos"),
+              E("span", { className: "bg-sage-dark text-parchment-100 text-[10px] font-bold px-2 py-0.5 rounded-full" }, "RPG de Bienestar")
+            ),
+            E("p", { className: "text-xs text-sage-light font-semibold" }, "Salud celular, nutrición y hábitos respaldados por la ciencia")
+          )
+        ),
+
+        // Auth Google Status / Button
+        E("div", { className: "flex items-center gap-3" },
+          userProfile ? E("div", { className: "flex items-center gap-2.5 bg-forest-900/90 px-3 py-1.5 rounded-2xl border border-forest-600" },
+            E("img", { src: userProfile.avatar, alt: userProfile.name, className: "w-7 h-7 rounded-full bg-parchment-200 p-0.5" }),
+            E("div", { className: "text-left" },
+              E("div", { className: "text-xs font-bold text-parchment-100 truncate max-w-[120px]" }, userProfile.name),
+              E("div", { className: "text-[9px] text-sage-light font-bold" }, "🟢 Sincronizado")
+            ),
+            E("button", { onClick: handleLogout, title: "Cerrar sesión", className: "text-xs text-terracotta-light hover:text-white ml-1 font-bold" }, "✕")
+          ) : E("button", {
+            onClick: () => setShowAuthModal(true),
+            className: "flex items-center gap-2 bg-parchment-100 hover:bg-parchment-200 text-forest-900 font-fredoka font-bold text-xs px-4 py-2 rounded-2xl btn-3d transition shadow-md"
+          },
+            E("svg", { className: "w-4 h-4", viewBox: "0 0 24 24" },
+              E("path", { fill: "#4285F4", d: "M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" }),
+              E("path", { fill: "#34A853", d: "M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" }),
+              E("path", { fill: "#FBBC05", d: "M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" }),
+              E("path", { fill: "#EA4335", d: "M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" })
+            ),
+            "Iniciar con Google"
+          )
         )
       ),
-      E("div", { className: "flex flex-wrap items-center justify-center gap-3 bg-forest-900/80 px-4 py-2.5 rounded-2xl border border-forest-600 font-fredoka text-sm" },
-        E("div", { className: "flex items-center gap-1.5 text-gold" },
-          E("span", null, "🪙"),
-          E("span", { className: "font-bold" }, pet.coins, " Monedas")
+
+      // Resource Badges
+      E("div", { className: "flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-forest-700/80" },
+        E("div", { className: "flex items-center gap-4 text-xs font-fredoka" },
+          E("div", { className: "flex items-center gap-1.5 text-gold font-bold text-sm" },
+            E("span", null, "🪙"), E("span", null, pet.coins, " Monedas")
+          ),
+          E("div", { className: "w-px h-4 bg-forest-600" }),
+          E("div", { className: "flex items-center gap-1.5 text-gold font-bold text-sm" },
+            E("span", null, "🔥"), E("span", null, pet.visit?.streak || 1, " días seguidos")
+          ),
+          E("div", { className: "w-px h-4 bg-forest-600" }),
+          E("div", { className: "flex items-center gap-1.5 text-terracotta-light font-bold text-sm" },
+            E("span", null, "❤️"), E("span", null, pet.happiness, "% Felicidad")
+          )
         ),
-        E("div", { className: "w-px h-5 bg-forest-600" }),
-        E("div", { className: "flex items-center gap-1.5 text-gold", title: "Días seguidos que cumplís hábitos" },
-          E("span", null, "🔥"),
-          E("span", { className: "font-bold" }, pet.visit?.streak || 1, " días de racha")
-        ),
-        E("div", { className: "w-px h-5 bg-forest-600" }),
-        E("div", { className: "flex items-center gap-1.5 text-terracotta-light" },
-          E("span", null, "❤️"),
-          E("span", { className: "font-bold" }, pet.happiness, "% Felicidad")
+        E("div", { className: "text-[11px] font-bold text-sage-light" },
+          "Nivel ", pet.level, " · ", pet.xp, " / ", pet.level * 60, " XP"
         )
       )
     ),
 
-    // Hero Pet Card
+    // Hero Companion Card (Clean, aesthetic and responsive)
     E("div", { className: "bg-parchment-200 border-3 border-forest-800 rounded-3xl p-6 card-3d flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden" },
       E("div", { className: "flex flex-col items-center" },
         E(FullBodyAnimal, { pet, scale: 1.15, reaction: petReaction, onClick: () => sfx.tap() }),
@@ -1226,18 +1237,18 @@ function App() {
       E("div", { className: "flex-1 w-full space-y-4" },
         E("div", null,
           E("div", { className: "flex flex-wrap items-center gap-2" },
-            E("h2", { className: "font-fredoka text-2xl md:text-3xl font-bold text-forest-900" }, pet.name),
-            E("span", { className: "text-xs font-bold text-terracotta bg-terracotta/10 px-2.5 py-1 rounded-xl border border-terracotta/30" }, '"', pet.title, '"'),
-            E("span", { className: "text-xs font-bold bg-gold/20 text-forest-900 px-2 py-0.5 rounded-lg border border-gold/40" }, "Nivel ", pet.level)
+            E("h2", { className: "font-fredoka text-2xl sm:text-3xl font-bold text-forest-900" }, pet.name || "Tu Compañero"),
+            E("span", { className: "text-xs font-bold text-terracotta bg-terracotta/10 px-2.5 py-1 rounded-xl border border-terracotta/30" }, '"', pet.title, '"')
           ),
           E("p", { className: "text-xs text-forest-700 font-semibold mt-1" },
-            "Experiencia: ", pet.xp, " / ", pet.level * 60, " XP para el siguiente nivel"
+            "Elegí su nombre y ropa en la pestaña de Armario. ¡Hacé click sobre él para acariciarlo!"
           )
         ),
+        // Progress Bars
         E("div", { className: "space-y-3" },
           E("div", null,
             E("div", { className: "flex justify-between text-xs font-bold text-forest-800 mb-1" },
-              E("span", null, "⭐ Progreso de Experiencia (XP)"),
+              E("span", null, "⭐ Experiencia hacia Nivel ", pet.level + 1),
               E("span", null, Math.floor((pet.xp / (pet.level * 60)) * 100), "%")
             ),
             E("div", { className: "w-full bg-parchment-400 h-3.5 rounded-full overflow-hidden border border-forest-800" },
@@ -1249,7 +1260,7 @@ function App() {
           ),
           E("div", null,
             E("div", { className: "flex justify-between text-xs font-bold text-forest-800 mb-1" },
-              E("span", null, "❤️ Bienestar y Felicidad de tu Mascota"),
+              E("span", null, "❤️ Felicidad del Compañero"),
               E("span", null, pet.happiness, "%")
             ),
             E("div", { className: "w-full bg-parchment-400 h-3.5 rounded-full overflow-hidden border border-forest-800" },
@@ -1260,12 +1271,13 @@ function App() {
             )
           )
         ),
-        E("div", { className: "pt-2 flex flex-wrap items-center gap-2" },
+        // Poses bar
+        E("div", { className: "pt-1 flex flex-wrap items-center gap-2" },
           E("span", { className: "text-xs font-bold text-forest-800" }, "Pose:"),
           Object.values(POSES).map((p) => E("button", {
             key: p.id,
             onClick: () => { sfx.tap(); setPet((prev) => ({ ...prev, pose: p.id })); },
-            className: `px-2.5 py-1 rounded-xl text-xs font-bold flex items-center gap-1 transition border ${pet.pose === p.id ? "bg-forest-800 text-gold border-forest-900" : "bg-parchment-100 text-forest-800 border-parchment-400 hover:bg-parchment-300"}`
+            className: `px-2.5 py-1 rounded-xl text-xs font-bold flex items-center gap-1 transition border ${pet.pose === p.id ? "bg-forest-800 text-gold border-forest-900 shadow-sm" : "bg-parchment-100 text-forest-800 border-parchment-400 hover:bg-parchment-300"}`
           },
             E("span", null, p.icon),
             E("span", null, p.name)
@@ -1274,16 +1286,16 @@ function App() {
       )
     ),
 
-    // Navigation Tabs
+    // Navigation Tabs (7 Full interactive sections)
     E("nav", { className: "flex gap-2 overflow-x-auto pb-2 scrollbar-none" },
       [
-        { id: "tasks", label: "🎯 Misiones & Hábitos" },
-        { id: "nutrition", label: "🥗 Nutrición & Comidas" },
-        { id: "wardrobe", label: "🐾 Armario & Mascota" },
+        { id: "tasks", label: "🎯 Hábitos & Rutinas" },
+        { id: "nutrition", label: "🥗 Nutrición & Métricas" },
+        { id: "library", label: "📚 Biblioteca & Mitos" },
+        { id: "quiz", label: "🧠 Quiz Biológico" },
+        { id: "wardrobe", label: "🐾 Armario & Especies" },
         { id: "shop", label: "🛍️ Tienda" },
-        { id: "stats", label: "🏆 Logros" },
-        { id: "reminders", label: "🔔 Recordatorios" },
-        { id: "about", label: "👥 Sobre el Proyecto" }
+        { id: "reminders", label: "🔔 Recordatorios" }
       ].map((tab) => E("button", {
         key: tab.id,
         onClick: () => { sfx.tap(); setActiveTab(tab.id); },
@@ -1293,13 +1305,14 @@ function App() {
 
     // TAB 1: Tasks & Habits
     activeTab === "tasks" && E("div", { className: "space-y-6" },
+      // Custom habit creation form
       E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-4 rounded-3xl card-3d flex flex-col md:flex-row gap-3" },
         E("input", {
           type: "text",
           value: newTitle,
           onChange: (e) => setNewTitle(e.target.value),
           onKeyDown: (e) => e.key === "Enter" && handleAddCustomTask(),
-          placeholder: "Escribí un nuevo hábito o tarea saludable...",
+          placeholder: "Escribí tu propio hábito saludable...",
           className: "flex-1 bg-parchment-100 border-2 border-parchment-400 rounded-2xl px-4 py-2.5 text-sm text-forest-900 font-bold focus:outline-none focus:border-forest-800"
         }),
         E("select", {
@@ -1319,243 +1332,338 @@ function App() {
       E("div", { className: "grid md:grid-cols-2 gap-6" },
         // Continuous Habits
         E("div", { className: "space-y-3" },
-          E("h3", { className: "font-fredoka font-bold text-parchment-100 text-lg flex items-center gap-2" },
-            E("span", null, "🎯 HÁBITOS CONTINUOS")
+          E("div", { className: "flex justify-between items-center" },
+            E("h3", { className: "font-fredoka font-bold text-parchment-100 text-lg flex items-center gap-2" },
+              E("span", null, "🎯"), "HÁBITOS CONTINUOS (+ / -)"
+            ),
+            E("span", { className: "text-[11px] text-sage-light font-bold" }, "Rachas activas")
           ),
           habits.filter((h) => h.type === "habit").map((h) => E("div", {
             key: h.id,
-            className: "bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl card-3d flex items-center justify-between gap-3"
+            className: "bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl card-3d flex flex-col justify-between gap-2.5"
           },
-            E("div", null,
-              E("div", { className: "font-bold text-sm text-forest-900" }, h.title),
-              E("div", { className: "text-xs font-bold text-gold mt-0.5" }, "🔥 Racha: ", h.streak || 0, " días seguidos")
+            E("div", { className: "flex items-start justify-between gap-3" },
+              E("div", null,
+                E("span", { className: "text-[10px] font-bold text-forest-600 uppercase tracking-wider" }, h.category || "Hábito"),
+                E("div", { className: "font-bold text-sm text-forest-950" }, h.title),
+                E("div", { className: "text-[11px] text-forest-700 font-semibold mt-0.5 leading-snug" }, h.bio)
+              ),
+              E("div", { className: "flex gap-2" },
+                h.positive && E("button", {
+                  onClick: () => handleCompleteHabit(h.id, true),
+                  title: "Sumar acierto",
+                  className: "w-10 h-10 rounded-xl bg-sage hover:bg-sage-dark text-white font-black text-xl btn-3d-sage flex items-center justify-center"
+                }, "+"),
+                h.negative && E("button", {
+                  onClick: () => handleCompleteHabit(h.id, false),
+                  title: "Restar por hábito no deseado",
+                  className: "w-10 h-10 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white font-black text-xl btn-3d-terracotta flex items-center justify-center"
+                }, "-")
+              )
             ),
-            E("div", { className: "flex gap-2" },
-              h.positive && E("button", {
-                onClick: () => handleCompleteHabit(h.id, true),
-                title: "Sumar hábito cumplido",
-                className: "w-10 h-10 rounded-xl bg-sage hover:bg-sage-dark text-white font-black text-xl btn-3d-sage flex items-center justify-center"
-              }, "+"),
-              h.negative && E("button", {
-                onClick: () => handleCompleteHabit(h.id, false),
-                title: "Restar por hábito no deseado",
-                className: "w-10 h-10 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white font-black text-xl btn-3d-terracotta flex items-center justify-center"
-              }, "-")
+            E("div", { className: "flex justify-between items-center pt-2 border-t border-parchment-300 text-xs font-bold text-gold-hover" },
+              E("span", null, "🔥 Racha: ", h.streak || 0, " días"),
+              E("span", { className: "text-[11px] text-forest-600" }, "+15 XP · +10 🪙")
             )
           ))
         ),
 
         // Daily Routines
         E("div", { className: "space-y-3" },
-          E("h3", { className: "font-fredoka font-bold text-parchment-100 text-lg flex items-center gap-2" },
-            E("span", null, "📝 RUTINAS DIARIAS DE HOY")
+          E("div", { className: "flex justify-between items-center" },
+            E("h3", { className: "font-fredoka font-bold text-parchment-100 text-lg flex items-center gap-2" },
+              E("span", null, "📝"), "RUTINAS DIARIAS DE HOY"
+            ),
+            E("span", { className: "text-[11px] text-sage-light font-bold" }, "1 por día")
           ),
           habits.filter((h) => h.type === "daily").map((h) => E("div", {
             key: h.id,
-            className: `bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl card-3d flex items-center justify-between gap-3 ${h.done ? "opacity-60 bg-parchment-300" : ""}`
+            className: `bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl card-3d flex flex-col justify-between gap-2.5 ${h.done ? "opacity-65 bg-parchment-300" : ""}`
           },
-            E("div", { className: "flex items-center gap-3" },
+            E("div", { className: "flex items-start gap-3" },
               E("button", {
                 onClick: () => handleCompleteHabit(h.id, true),
-                className: `w-8 h-8 rounded-xl border-2 border-forest-800 flex items-center justify-center font-bold text-sm transition ${h.done ? "bg-forest-800 text-gold" : "bg-parchment-100"}`
+                className: `w-8 h-8 rounded-xl border-2 border-forest-800 flex items-center justify-center font-bold text-sm transition mt-0.5 ${h.done ? "bg-forest-800 text-gold" : "bg-parchment-100"}`
               }, h.done ? "✓" : ""),
-              E("div", null,
-                E("div", { className: `font-bold text-sm ${h.done ? "line-through text-forest-600" : "text-forest-900"}` }, h.title),
-                E("div", { className: "text-xs font-bold text-forest-600" }, "Rutina diaria · 🔥 Racha: ", h.streak || 0, " días")
+              E("div", { className: "flex-1" },
+                E("span", { className: "text-[10px] font-bold text-forest-600 uppercase tracking-wider" }, h.category || "Rutina"),
+                E("div", { className: `font-bold text-sm ${h.done ? "line-through text-forest-600" : "text-forest-950"}` }, h.title),
+                E("div", { className: "text-[11px] text-forest-700 font-semibold mt-0.5 leading-snug" }, h.bio)
               )
+            ),
+            E("div", { className: "flex justify-between items-center pt-2 border-t border-parchment-300 text-xs font-bold text-forest-700" },
+              E("span", null, h.done ? "✅ Completada hoy" : "⏳ Pendiente de hoy"),
+              E("span", { className: "text-gold" }, "🔥 Racha: ", h.streak || 0, " días")
             )
           ))
         )
       )
     ),
 
-    // TAB 2: Nutrition & Food Guide (NEW & EXPANDED!)
+    // TAB 2: Nutrition & Metabolic Calculator
     activeTab === "nutrition" && E("div", { className: "space-y-6" },
-      // Nutrition Hero Banner
-      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-3" },
-        E("div", { className: "flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3" },
-          E("div", null,
-            E("h2", { className: "font-fredoka text-2xl font-bold text-forest-900 flex items-center gap-2" },
-              E("span", null, "🥗"), "Guía Biológica de Nutrición y Comidas Reales"
-            ),
-            E("p", { className: "text-xs text-forest-700 font-semibold" },
-              "Descubrí qué aporta cada alimento a tus células, cómo optimizar tu glucosa y sumá comidas recomendadas a tus hábitos diarios."
-            )
-          ),
-          E("span", { className: "bg-sage/20 text-forest-900 border border-sage px-3 py-1 rounded-full text-xs font-bold font-fredoka" },
-            "Basado en Harvard & OMS 🔬"
-          )
-        ),
-
-        // Search & Filters
-        E("div", { className: "flex flex-col md:flex-row gap-3 pt-2" },
-          E("input", {
-            type: "text",
-            value: foodSearch,
-            onChange: (e) => setFoodSearch(e.target.value),
-            placeholder: "🔍 Buscar por comida, nutriente (ej: Omega-3, Magnesio, Proteína)...",
-            className: "flex-1 bg-parchment-100 border-2 border-parchment-400 rounded-2xl px-4 py-2 text-sm text-forest-900 font-bold focus:outline-none focus:border-forest-800"
-          }),
-          E("div", { className: "flex gap-1.5 overflow-x-auto pb-1" },
-            [
-              { id: "all", label: "Todas" },
-              { id: "desayuno", label: "🌅 Desayunos" },
-              { id: "almuerzo", label: "🥗 Almuerzos" },
-              { id: "cena", label: "🌙 Cenas" },
-              { id: "snack", label: "🍎 Snacks" },
-              { id: "hidratacion", label: "💧 Agua" }
-            ].map((cat) => E("button", {
-              key: cat.id,
-              onClick: () => { sfx.tap(); setFoodCategory(cat.id); },
-              className: `px-3 py-1.5 rounded-xl font-fredoka font-bold text-xs whitespace-nowrap transition border ${foodCategory === cat.id ? "bg-forest-800 text-gold border-forest-900" : "bg-parchment-100 text-forest-800 border-parchment-400 hover:bg-parchment-300"}`
-            }, cat.label))
-          )
-        )
-      ),
-
-      // Interactive Water Calculator
-      E("div", { className: "bg-forest-900/90 text-parchment-100 border-2 border-forest-600 p-6 rounded-3xl card-3d space-y-4" },
+      // Metabolic Calculator Box
+      E("div", { className: "bg-forest-900 text-parchment-100 border-2 border-gold p-6 rounded-3xl card-3d space-y-5" },
         E("div", { className: "flex flex-col md:flex-row justify-between items-start md:items-center gap-3 border-b border-forest-700 pb-3" },
           E("div", null,
-            E("h3", { className: "font-fredoka text-xl font-bold text-gold flex items-center gap-2" },
-              E("span", null, "💧"), "Calculadora Celular de Hidratación Fisiológica"
+            E("h2", { className: "font-fredoka text-2xl font-bold text-gold flex items-center gap-2" },
+              E("span", null, "⚖️"), "Calculadora Nutricional & Metabólica Biológica"
             ),
             E("p", { className: "text-xs text-sage-light" },
-              "Fórmula científica: ~35 ml de agua por kg de masa corporal para sostener el volumen plasmático y la filtración renal."
+              "Ingresá tus datos para obtener tu gasto energético real y la distribución exacta de macronutrientes recomendada."
             )
           ),
-          E("div", { className: "text-right" },
-            E("div", { className: "font-fredoka text-2xl font-bold text-gold" }, recommendedLiters, " Litros / día"),
-            E("div", { className: "text-[11px] text-parchment-300" }, "Equivale a ~", totalGlassesGoal, " vasos de 250 ml")
+          E("span", { className: "bg-forest-800 text-gold px-3 py-1 rounded-xl font-fredoka font-bold text-sm border border-forest-600" },
+            "~", metabolicCalc.tdee, " kcal diarias estimadas"
           )
         ),
-        E("div", { className: "grid sm:grid-cols-2 gap-4" },
+
+        // Sliders & Inputs
+        E("div", { className: "grid sm:grid-cols-3 gap-4" },
           E("div", null,
-            E("label", { className: "text-xs font-bold text-parchment-300" }, "Tu peso aproximado (kg):"),
-            E("div", { className: "flex items-center gap-3 mt-1" },
+            E("label", { className: "text-xs font-bold text-parchment-300" }, "Tu peso corporal:"),
+            E("div", { className: "flex items-center gap-3 mt-1.5" },
               E("input", {
-                type: "range",
-                min: 35,
-                max: 110,
-                value: userWeight,
+                type: "range", min: 38, max: 110, value: userWeight,
                 onChange: (e) => setUserWeight(Number(e.target.value)),
                 className: "flex-1 accent-gold"
               }),
-              E("span", { className: "font-fredoka font-bold text-gold text-lg w-16 text-right" }, userWeight, " kg")
+              E("span", { className: "font-fredoka font-bold text-gold text-base w-14 text-right" }, userWeight, " kg")
             )
           ),
           E("div", null,
-            E("label", { className: "text-xs font-bold text-parchment-300" }, "Nivel de actividad física de hoy:"),
-            E("div", { className: "grid grid-cols-3 gap-2 mt-1" },
-              [
-                { id: "light", label: "Sedentario" },
-                { id: "moderate", label: "Moderado" },
-                { id: "intense", label: "Intenso" }
-              ].map((lvl) => E("button", {
-                key: lvl.id,
-                onClick: () => { sfx.tap(); setUserActive(lvl.id); },
-                className: `py-1.5 px-2 rounded-xl text-xs font-bold font-fredoka transition border ${userActive === lvl.id ? "bg-gold text-forest-900 border-gold" : "bg-forest-800 text-parchment-300 border-forest-700"}`
-              }, lvl.label))
+            E("label", { className: "text-xs font-bold text-parchment-300" }, "Tu altura:"),
+            E("div", { className: "flex items-center gap-3 mt-1.5" },
+              E("input", {
+                type: "range", min: 140, max: 205, value: userHeight,
+                onChange: (e) => setUserHeight(Number(e.target.value)),
+                className: "flex-1 accent-gold"
+              }),
+              E("span", { className: "font-fredoka font-bold text-gold text-base w-16 text-right" }, userHeight, " cm")
+            )
+          ),
+          E("div", null,
+            E("label", { className: "text-xs font-bold text-parchment-300" }, "Actividad física:"),
+            E("select", {
+              value: userActive,
+              onChange: (e) => setUserActive(e.target.value),
+              className: "w-full mt-1.5 bg-forest-800 border border-forest-600 rounded-xl px-3 py-1.5 text-xs font-bold text-parchment-100"
+            },
+              E("option", { value: "light" }, "Sedentario (Poco movimiento)"),
+              E("option", { value: "moderate" }, "Moderado (3-4 días/semana)"),
+              E("option", { value: "intense" }, "Intenso (Entrenamiento diario)")
             )
           )
         ),
-        // Glass tracker
-        E("div", { className: "pt-2" },
-          E("div", { className: "flex justify-between items-center text-xs font-bold mb-2" },
-            E("span", { className: "text-parchment-200" }, "Vasos de agua tomados hoy (hacé click para marcar):"),
-            E("span", { className: "text-gold font-fredoka text-sm" }, glassesDrunk, " de ", totalGlassesGoal, " vasos")
-          ),
-          E("div", { className: "flex flex-wrap gap-2.5" },
-            Array.from({ length: totalGlassesGoal }).map((_, idx) => E("button", {
-              key: idx,
-              onClick: () => handleToggleGlass(idx),
-              title: `Vaso ${idx + 1} de agua (250 ml)`,
-              className: `w-11 h-12 rounded-2xl flex flex-col items-center justify-center font-bold text-lg transition-transform active:scale-90 border-2 ${idx < glassesDrunk ? "bg-sage border-sage-light text-white shadow-md scale-105" : "bg-forest-800/80 border-forest-700 text-parchment-400 opacity-60 hover:opacity-100"}`
-            },
-              E("span", null, idx < glassesDrunk ? "💧" : "🥛"),
-              E("span", { className: "text-[9px] font-fredoka -mt-1" }, (idx + 1) * 250, "ml")
-            ))
-          )
+
+        // Results grid
+        E("div", { className: "grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2" },
+          [
+            { label: "Proteína Recomendada", val: metabolicCalc.proteinGrams + " g / día", sub: "~1.4g por kg de peso", icon: "🥩", color: "border-terracotta bg-forest-800/80" },
+            { label: "Carbohidratos Complejos", val: metabolicCalc.carbGrams + " g / día", sub: "Combustible cerebral", icon: "🍞", color: "border-gold bg-forest-800/80" },
+            { label: "Grasas Saludables", val: metabolicCalc.fatGrams + " g / día", sub: "Membranas y neuronas", icon: "🥑", color: "border-sage bg-forest-800/80" },
+            { label: "Meta de Agua", val: metabolicCalc.waterLiters + " L / día", sub: "Volumen plasmático", icon: "💧", color: "border-sky-500 bg-forest-800/80" }
+          ].map((item, idx) => E("div", {
+            key: idx,
+            className: `p-3.5 rounded-2xl border ${item.color} text-center space-y-1`
+          },
+            E("div", { className: "text-xl" }, item.icon),
+            E("div", { className: "font-fredoka font-bold text-gold text-lg" }, item.val),
+            E("div", { className: "text-[11px] font-bold text-parchment-200" }, item.label),
+            E("div", { className: "text-[10px] text-sage-light" }, item.sub)
+          ))
         )
       ),
 
-      // Meals Cards Grid
-      E("div", { className: "grid md:grid-cols-2 gap-6" },
-        filteredFoods.map((food) => E("div", {
-          key: food.id,
-          className: "bg-parchment-100 border-2 border-forest-800 p-5 rounded-3xl card-3d flex flex-col justify-between space-y-4"
+      // Scientific Nutrition Guide (Carbos, Proteínas, Grasas)
+      E("div", { className: "grid md:grid-cols-3 gap-5" },
+        [
+          {
+            title: "🍞 Los Carbohidratos a Fondo",
+            badge: "Energía Primaria",
+            color: "border-gold bg-parchment-100",
+            p1: "• Complejos vs Simples: Los granos enteros y tubérculos tienen cadenas largas que tardan en romperse, entregando glucosa progresiva.",
+            p2: "• El Índice Glucémico (IG): Mide qué tan rápido un alimento eleva la glucosa. El IG bajo evita picos y caídas de energía.",
+            p3: "• La Fibra Dietética: No se digiere, pero alimenta a tus bacterias buenas (microbiota) para producir serotonina y regular la saciedad."
+          },
+          {
+            title: "🥩 Las Proteínas y Músculos",
+            badge: "Construcción Celular",
+            color: "border-terracotta bg-parchment-100",
+            p1: "• 20 Aminoácidos: 9 de ellos son esenciales (tu cuerpo no puede fabricarlos y debe comerlos sí o sí).",
+            p2: "• Más que músculo: Las enzimas, anticuerpos, queratina y receptores de neurotransmisores son todos proteínas.",
+            p3: "• Combinación vegetal: Si no comés carne, unir legumbres (lentejas) con cereales (arroz) crea una proteína 100% completa."
+          },
+          {
+            title: "🥑 Las Grasas Saludables",
+            badge: "Protección Neuronal",
+            color: "border-sage bg-parchment-100",
+            p1: "• Vaina de Mielina: El cerebro necesita ácidos grasos para aislar los axones y hacer que tus pensamientos viajen rápido.",
+            p2: "• Omega-3 (DHA/EPA): Reducen marcadores de inflamación celular y protegen el endotelio de tus arterias.",
+            p3: "• No temas a las grasas naturales: La palta, nueces, semillas y oliva son vitales para regular tus hormonas."
+          }
+        ].map((block, i) => E("div", {
+          key: i,
+          className: `p-5 rounded-3xl border-2 ${block.color} card-3d space-y-3`
         },
-          E("div", { className: "space-y-3" },
-            E("div", { className: "flex items-start justify-between gap-3" },
-              E("div", { className: "flex items-center gap-3" },
-                E("span", { className: "text-3xl p-2 bg-parchment-200 rounded-2xl border border-parchment-400" }, food.icon),
-                E("div", null,
-                  E("span", { className: "text-[10px] font-bold text-forest-700 uppercase tracking-wider" }, food.categoryLabel),
-                  E("h3", { className: "font-fredoka text-lg font-bold text-forest-900 leading-snug" }, food.title)
-                )
-              ),
-              E("span", { className: "text-xs font-bold text-gold bg-forest-900 px-2.5 py-1 rounded-xl whitespace-nowrap" }, food.calories)
-            ),
-
-            // Macros pills
-            E("div", { className: "grid grid-cols-3 gap-2 bg-parchment-200/80 p-2.5 rounded-2xl text-center border border-parchment-300" },
-              E("div", null,
-                E("div", { className: "text-[10px] font-bold text-forest-600 uppercase" }, "Proteína"),
-                E("div", { className: "text-xs font-bold text-forest-900" }, food.macros.protein)
-              ),
-              E("div", null,
-                E("div", { className: "text-[10px] font-bold text-forest-600 uppercase" }, "Carbohidratos"),
-                E("div", { className: "text-xs font-bold text-forest-900" }, food.macros.carbs)
-              ),
-              E("div", null,
-                E("div", { className: "text-[10px] font-bold text-forest-600 uppercase" }, "Grasas Saludables"),
-                E("div", { className: "text-xs font-bold text-forest-900" }, food.macros.fats)
-              )
-            ),
-
-            // Biological Explanation
-            E("div", { className: "text-xs text-forest-800 leading-relaxed space-y-1.5" },
-              E("p", { className: "font-semibold" },
-                E("span", { className: "font-bold text-forest-950" }, "🔬 Fundamento biológico: "),
-                food.bioExplanation
-              ),
-              E("p", { className: "text-sage-dark font-bold text-[11px]" }, food.bodyBenefit),
-              E("p", { className: "text-forest-700 text-[11px] italic bg-parchment-200/50 p-2 rounded-xl border border-parchment-300" },
-                "💡 ", food.tip
-              )
-            ),
-
-            // Micronutrients tags
-            E("div", { className: "flex flex-wrap gap-1.5 pt-1" },
-              food.micronutrients.map((m, i) => E("span", {
-                key: i,
-                className: "text-[10px] font-bold bg-forest-800/10 text-forest-800 px-2 py-0.5 rounded-lg border border-forest-800/20"
-              }, "• ", m))
-            )
+          E("div", { className: "flex justify-between items-center border-b border-parchment-300 pb-2" },
+            E("h3", { className: "font-fredoka font-bold text-forest-900 text-base" }, block.title),
+            E("span", { className: "text-[10px] font-bold bg-forest-800 text-parchment-100 px-2 py-0.5 rounded-lg" }, block.badge)
           ),
-
-          // Actions & Source
-          E("div", { className: "pt-3 border-t border-parchment-300 flex flex-col sm:flex-row items-center justify-between gap-3" },
-            E("a", {
-              href: food.sourceUrl,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "text-[11px] font-bold text-forest-700 hover:text-gold flex items-center gap-1 underline"
-            }, "📖 Ver fuente científica (Harvard / OMS)"),
-            E("button", {
-              onClick: () => handleAddFoodAsHabit(food),
-              className: "w-full sm:w-auto bg-forest-800 hover:bg-forest-700 text-parchment-100 font-fredoka font-bold text-xs px-4 py-2 rounded-xl btn-3d transition"
-            }, "+ Sumar a mis hábitos")
+          E("div", { className: "text-xs text-forest-800 space-y-2 leading-relaxed font-semibold" },
+            E("p", null, block.p1),
+            E("p", null, block.p2),
+            E("p", null, block.p3)
           )
         ))
       )
     ),
 
-    // TAB 3: Wardrobe & Pet Customization
+    // TAB 3: Interactive Biology & Health Library (FAQ & Myths)
+    activeTab === "library" && E("div", { className: "space-y-6" },
+      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-4" },
+        E("div", { className: "flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3" },
+          E("div", null,
+            E("h2", { className: "font-fredoka text-2xl font-bold text-forest-900 flex items-center gap-2" },
+              E("span", null, "📚"), "Biblioteca Biológica: Preguntas Frecuentes y Mitos"
+            ),
+            E("p", { className: "text-xs text-forest-700 font-semibold" },
+              "Respuestas científicas a las dudas que todos tenemos sobre comida, sueño, hidratación y cómo funciona el cuerpo."
+            )
+          ),
+          E("span", { className: "bg-sage/20 text-forest-900 border border-sage px-3 py-1 rounded-full text-xs font-bold font-fredoka" },
+            "8 Artículos Científicos 🔬"
+          )
+        ),
+
+        // Search & Category Filters
+        E("div", { className: "flex flex-col sm:flex-row gap-3 pt-2" },
+          E("input", {
+            type: "text",
+            value: librarySearch,
+            onChange: (e) => setLibrarySearch(e.target.value),
+            placeholder: "🔍 Buscar en la biblioteca (ej: carbohidratos, sueño, agua, dopamina)...",
+            className: "flex-1 bg-parchment-100 border-2 border-parchment-400 rounded-2xl px-4 py-2 text-sm font-bold text-forest-900 focus:outline-none focus:border-forest-800"
+          }),
+          E("div", { className: "flex gap-1.5 overflow-x-auto pb-1" },
+            [
+              { id: "all", label: "Todas" },
+              { id: "nutricion", label: "🥗 Nutrición" },
+              { id: "sueno", label: "🌙 Sueño" },
+              { id: "habitos", label: "🧠 Hábitos" },
+              { id: "hidratacion", label: "💧 Agua" }
+            ].map((f) => E("button", {
+              key: f.id,
+              onClick: () => { sfx.tap(); setLibraryFilter(f.id); },
+              className: `px-3 py-1.5 rounded-xl text-xs font-bold font-fredoka whitespace-nowrap transition border ${libraryFilter === f.id ? "bg-forest-800 text-gold border-forest-900" : "bg-parchment-100 text-forest-800 border-parchment-400"}`
+            }, f.label))
+          )
+        )
+      ),
+
+      // Library Cards Accordion
+      E("div", { className: "space-y-3" },
+        filteredFaqs.map((faq) => {
+          const isExp = expandedFaq === faq.id;
+          return E("div", {
+            key: faq.id,
+            className: "bg-parchment-100 border-2 border-forest-800 rounded-2xl p-4 card-3d transition"
+          },
+            E("div", {
+              onClick: () => { sfx.tap(); setExpandedFaq(isExp ? null : faq.id); },
+              className: "flex items-center justify-between cursor-pointer gap-3"
+            },
+              E("div", { className: "flex items-center gap-3" },
+                E("span", { className: "text-2xl p-1.5 bg-parchment-200 rounded-xl" }, faq.icon),
+                E("div", null,
+                  E("h3", { className: "font-fredoka text-base font-bold text-forest-900" }, faq.title),
+                  E("p", { className: "text-xs font-semibold text-forest-700" }, faq.short)
+                )
+              ),
+              E("span", { className: "font-fredoka font-bold text-lg text-forest-800 px-2" }, isExp ? "▲" : "▼")
+            ),
+            isExp && E("div", { className: "mt-3 pt-3 border-t border-parchment-300 text-xs text-forest-800 space-y-2 leading-relaxed" },
+              E("p", { className: "font-semibold" }, faq.body),
+              E("div", { className: "bg-parchment-200 p-3 rounded-xl border border-parchment-300 font-bold text-sage-dark text-[11px]" },
+                faq.takeaway
+              )
+            )
+          );
+        })
+      )
+    ),
+
+    // TAB 4: Interactive Biology Quiz (NEW & PLAYFUL!)
+    activeTab === "quiz" && E("div", { className: "max-w-2xl mx-auto space-y-6" },
+      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-5" },
+        E("div", { className: "flex justify-between items-center border-b border-parchment-300 pb-3" },
+          E("div", null,
+            E("span", { className: "text-[11px] font-bold text-forest-600 uppercase" },
+              `Pregunta ${quizIdx + 1} de ${QUIZ_QUESTIONS.length}`
+            ),
+            E("h2", { className: "font-fredoka text-xl font-bold text-forest-900" },
+              "Quiz Biológico: Poné a prueba tus conocimientos"
+            )
+          ),
+          E("div", { className: "text-right" },
+            E("span", { className: "bg-gold text-forest-950 px-3 py-1 rounded-xl font-fredoka font-bold text-xs shadow-sm" },
+              `Aciertos: ${quizScore}`
+            )
+          )
+        ),
+
+        // Question Title
+        E("div", { className: "font-fredoka font-bold text-base text-forest-950 py-1" },
+          QUIZ_QUESTIONS[quizIdx].q
+        ),
+
+        // Options List
+        E("div", { className: "space-y-2.5" },
+          QUIZ_QUESTIONS[quizIdx].options.map((opt, i) => {
+            const isCorrect = i === QUIZ_QUESTIONS[quizIdx].correct;
+            const isChosen = selectedOpt === i;
+            let btnClass = "bg-parchment-100 border-parchment-400 text-forest-900 hover:bg-parchment-300";
+            if (quizAnswered) {
+              if (isCorrect) btnClass = "bg-sage border-sage-dark text-white font-bold";
+              else if (isChosen) btnClass = "bg-terracotta border-terracotta-dark text-white font-bold";
+              else btnClass = "bg-parchment-100 opacity-50 text-forest-800";
+            }
+            return E("button", {
+              key: i,
+              disabled: quizAnswered,
+              onClick: () => handleAnswerQuiz(i),
+              className: `w-full text-left p-3.5 rounded-2xl border-2 text-xs font-bold transition flex items-center justify-between ${btnClass}`
+            },
+              E("span", null, opt),
+              quizAnswered && isCorrect && E("span", null, "✅"),
+              quizAnswered && isChosen && !isCorrect && E("span", null, "❌")
+            );
+          })
+        ),
+
+        // Answer Explanation
+        quizAnswered && E("div", { className: "p-4 bg-parchment-100 border-2 border-forest-800 rounded-2xl space-y-2" },
+          E("div", { className: "font-fredoka font-bold text-xs " + (selectedOpt === QUIZ_QUESTIONS[quizIdx].correct ? "text-sage-dark" : "text-terracotta") },
+            selectedOpt === QUIZ_QUESTIONS[quizIdx].correct ? "🎉 ¡Respuesta Correcta!" : "💡 Explicación Biológica:"
+          ),
+          E("p", { className: "text-xs text-forest-800 font-semibold leading-relaxed" },
+            QUIZ_QUESTIONS[quizIdx].explanation
+          ),
+          E("div", { className: "pt-2 text-right" },
+            E("button", {
+              onClick: nextQuiz,
+              className: "bg-forest-800 hover:bg-forest-700 text-parchment-100 font-fredoka font-bold text-xs px-5 py-2 rounded-xl btn-3d transition"
+            }, quizIdx + 1 < QUIZ_QUESTIONS.length ? "Siguiente Pregunta ➔" : "Reiniciar Quiz 🔄")
+          )
+        )
+      )
+    ),
+
+    // TAB 5: Wardrobe & Companion Customization
     activeTab === "wardrobe" && E("div", { className: "grid md:grid-cols-2 gap-6" },
       E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-5 rounded-3xl card-3d space-y-4" },
         E("h3", { className: "font-fredoka font-bold text-forest-900 text-lg border-b-2 border-parchment-400 pb-2" },
-          "✏️ Personalización del Compañero"
+          "✏️ Identidad y Especie de tu Compañero"
         ),
         E("div", { className: "grid grid-cols-2 gap-3" },
           E("div", null,
@@ -1564,6 +1672,7 @@ function App() {
               type: "text",
               value: pet.name,
               onChange: (e) => setPet((p) => ({ ...p, name: e.target.value })),
+              placeholder: "Elegí su nombre...",
               className: "w-full mt-1 bg-parchment-100 border-2 border-parchment-400 rounded-xl px-3 py-1.5 text-sm font-bold text-forest-900"
             })
           ),
@@ -1578,8 +1687,8 @@ function App() {
           )
         ),
         E("div", null,
-          E("label", { className: "text-xs font-bold text-forest-800" }, "Especie Animal (¡Nuevas y tiernas!):"),
-          E("div", { className: "grid grid-cols-4 sm:grid-cols-6 gap-2 mt-1.5" },
+          E("label", { className: "text-xs font-bold text-forest-800" }, "Especie Animal (¡Estéticas y tiernas!):"),
+          E("div", { className: "grid grid-cols-5 gap-2 mt-1.5" },
             Object.values(SPECIES).map((sp) => E("button", {
               key: sp.id,
               onClick: () => { sfx.tap(); setPet((p) => ({ ...p, species: sp.id })); },
@@ -1644,9 +1753,9 @@ function App() {
       )
     ),
 
-    // TAB 4: Shop
+    // TAB 6: Shop (Expanded with 20+ Aesthetic Items)
     activeTab === "shop" && E("div", { className: "space-y-4" },
-      E("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4" },
+      E("div", { className: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" },
         EQUIPMENT_CATALOGUE.map((item) => {
           const isOwned = pet.inventory.includes(item.id);
           return E("div", {
@@ -1667,77 +1776,27 @@ function App() {
       )
     ),
 
-    // TAB 5: Stats & Achievements
-    activeTab === "stats" && E("div", { className: "grid md:grid-cols-2 gap-6" },
-      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-4" },
-        E("h3", { className: "font-fredoka font-bold text-forest-900 text-lg flex items-center gap-2" },
-          E("span", null, "🏅"), "Pabellón de Medallas Biológicas"
-        ),
-        E("div", { className: "space-y-2.5" },
-          [
-            { title: "Primeros Pasos Celulares", desc: "Completaste 5 hábitos saludables", unlocked: (pet.totalDone || 0) >= 5, icon: "🌱" },
-            { title: "Racha Incombustible", desc: "Mantuviste una racha de 3 días seguidos", unlocked: (pet.visit?.streak || 0) >= 3, icon: "🔥" },
-            { title: "Maestro de la Hidratación", desc: "Completaste tu meta diaria de agua", unlocked: glassesDrunk >= totalGlassesGoal, icon: "💧" },
-            { title: "Amigo de la Nutrición", desc: "Posees al menos 3 objetos en el armario", unlocked: pet.inventory.length >= 3, icon: "🥑" },
-            { title: "Guardián de la Biología", desc: "Alcanza el Nivel 3 con tu mascota", unlocked: pet.level >= 3, icon: "🌟" }
-          ].map((m, i) => E("div", {
-            key: i,
-            className: `p-3.5 rounded-2xl border-2 flex items-center gap-3.5 ${m.unlocked ? "bg-parchment-100 border-forest-800 shadow-sm" : "bg-parchment-300/50 border-parchment-400 opacity-50"}`
-          },
-            E("span", { className: "text-2xl" }, m.icon),
-            E("div", null,
-              E("div", { className: "font-bold text-xs text-forest-900" }, m.title),
-              E("div", { className: "text-[11px] text-forest-700" }, m.desc)
-            )
-          ))
-        )
-      ),
-
-      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-4" },
-        E("h3", { className: "font-fredoka font-bold text-forest-900 text-lg flex items-center gap-2" },
-          E("span", null, "📊"), "Constancia de Hábitos Semanal"
-        ),
-        E("div", { className: "flex items-end justify-between h-44 pt-6 px-2 bg-parchment-100 rounded-2xl border border-parchment-400" },
-          [6, 5, 4, 3, 2, 1, 0].map((ago) => {
-            const dt = new Date();
-            dt.setDate(dt.getDate() - ago);
-            return {
-              d: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"][dt.getDay()],
-              n: (pet.history || {})[todayKey(dt)] || 0
-            };
-          }).map(({ d, n }) => E("div", {
-            key: d,
-            className: "flex flex-col items-center gap-2 flex-1"
-          },
-            E("div", {
-              className: "w-7 bg-forest-800 rounded-t-xl transition-all shadow-sm",
-              style: { height: `${Math.min(n * 20 + 8, 120)}px` },
-              title: `${n} hábitos cumplidos`
-            }),
-            E("span", { className: "text-[11px] font-bold text-forest-800 font-fredoka" }, d)
-          ))
-        )
-      )
-    ),
-
-    // TAB 6: Reminders
+    // TAB 7: Reminders (Circadian-based alerts)
     activeTab === "reminders" && E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-5" },
-      E("h3", { className: "font-fredoka font-bold text-forest-900 text-xl flex items-center gap-2" },
-        E("span", null, "🔔"), "Recordatorios Biológicos y de Hidratación"
+      E("div", { className: "flex justify-between items-center" },
+        E("h3", { className: "font-fredoka font-bold text-forest-900 text-xl flex items-center gap-2" },
+          E("span", null, "🔔"), "Recordatorios con Respaldo Circadiano"
+        ),
+        E("span", { className: "text-xs font-bold text-forest-700 bg-parchment-100 px-3 py-1 rounded-xl border border-parchment-300" },
+          "Avisos sonoros y visuales"
+        )
       ),
       E("p", { className: "text-xs font-semibold text-forest-700" },
-        "Te avisamos con campanitas y mensajes cuando llegue la hora de tomar agua, hacer pausas activas o preparar una comida nutritiva."
+        "Configurá momentos estratégicos del día para beber agua, moverte y desconectar antes de dormir."
       ),
       E("div", { className: "flex flex-col sm:flex-row gap-3" },
         E("input", {
-          type: "time",
-          value: newRTime,
+          type: "time", value: newRTime,
           onChange: (e) => setNewRTime(e.target.value || "09:00"),
           className: "bg-parchment-100 border-2 border-parchment-400 rounded-2xl px-3 py-2 text-sm font-bold text-forest-900"
         }),
         E("input", {
-          type: "text",
-          value: newRTitle,
+          type: "text", value: newRTitle,
           onChange: (e) => setNewRTitle(e.target.value),
           placeholder: "¿Qué querés recordar? (ej: Tomar 1 vaso de agua)",
           className: "flex-1 bg-parchment-100 border-2 border-parchment-400 rounded-2xl px-4 py-2 text-sm font-bold text-forest-900"
@@ -1745,7 +1804,7 @@ function App() {
         E("button", {
           onClick: () => {
             if (!newRTitle.trim()) return;
-            setReminders((prev) => [...prev, { id: "r" + Date.now(), time: newRTime, title: newRTitle.trim(), active: true }].sort((a, b) => a.time.localeCompare(b.time)));
+            setReminders((prev) => [...prev, { id: "r" + Date.now(), time: newRTime, title: newRTitle.trim(), bio: "Hábito programado por el usuario", active: true }].sort((a, b) => a.time.localeCompare(b.time)));
             setNewRTitle("");
             sfx.tap();
             triggerToast("⏰ Recordatorio guardado");
@@ -1756,16 +1815,19 @@ function App() {
       E("div", { className: "space-y-3" },
         reminders.map((r) => E("div", {
           key: r.id,
-          className: "bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl flex items-center justify-between gap-3"
+          className: "bg-parchment-100 border-2 border-forest-800 p-4 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3"
         },
           E("div", { className: "flex-1" },
-            E("span", { className: "font-fredoka font-bold text-gold text-sm bg-forest-800 px-2.5 py-0.5 rounded-lg" }, r.time),
-            E("p", { className: "font-bold text-xs text-forest-900 mt-1.5" }, r.title)
+            E("div", { className: "flex items-center gap-2" },
+              E("span", { className: "font-fredoka font-bold text-gold text-sm bg-forest-800 px-2.5 py-0.5 rounded-lg" }, r.time),
+              E("span", { className: "font-bold text-xs text-forest-950" }, r.title)
+            ),
+            E("p", { className: "text-[11px] text-forest-600 font-semibold mt-1" }, "🔬 ", r.bio)
           ),
-          E("div", { className: "flex items-center gap-2" },
+          E("div", { className: "flex items-center gap-2 self-end sm:self-center" },
             E("button", {
-              onClick: () => { sfx.chime(); triggerToast(`🔔 Prueba de aviso: ${r.title}`); },
-              className: "px-3 py-1.5 rounded-xl text-sm bg-parchment-300 hover:bg-parchment-400"
+              onClick: () => { sfx.chime(); triggerToast(`🔔 Alerta de prueba: ${r.title}`); },
+              className: "px-3 py-1.5 rounded-xl text-xs font-bold bg-parchment-300 hover:bg-parchment-400 text-forest-900"
             }, "🔊 Probar"),
             E("button", {
               onClick: () => setReminders((prev) => prev.filter((x) => x.id !== r.id)),
@@ -1776,123 +1838,68 @@ function App() {
       )
     ),
 
-    // TAB 7: About the Project (QUIÉNES SOMOS & BIOLOGÍA - ETEC UM)
-    activeTab === "about" && E("div", { className: "space-y-6" },
-      // Institutional Banner
-      E("div", { className: "bg-forest-900 text-parchment-100 border-2 border-gold p-6 sm:p-8 rounded-3xl card-3d space-y-4 relative overflow-hidden" },
-        E("div", { className: "flex flex-col md:flex-row justify-between items-start md:items-center gap-4" },
-          E("div", null,
-            E("div", { className: "inline-block bg-gold text-forest-950 font-fredoka font-bold text-xs px-3 py-1 rounded-full mb-2 uppercase tracking-wider" },
-              "Escuela Técnica de la Universidad de Mendoza (ETec)"
-            ),
-            E("h2", { className: "font-fredoka text-3xl font-bold text-parchment-100 leading-tight" },
-              "Ruta de Hábitos: Compañeros de Bienestar RPG"
-            ),
-            E("p", { className: "text-sage-light text-sm font-semibold mt-1" },
-              "Proyecto Interdisciplinario · 3° Año Especialidad Informática · Cátedra de Biología (2026)"
-            )
-          ),
-          E("div", { className: "bg-forest-800/90 border border-forest-600 p-4 rounded-2xl text-center min-w-[170px]" },
-            E("span", { className: "text-3xl" }, "🧬"),
-            E("div", { className: "font-fredoka text-gold font-bold text-sm mt-1" }, "ETec UM"),
-            E("div", { className: "text-[11px] text-parchment-300" }, "Mendoza, Argentina")
-          )
-        ),
-        E("p", { className: "text-xs sm:text-sm text-parchment-200 leading-relaxed pt-2 border-t border-forest-700" },
-          "Este proyecto nace en nuestra clase de ", E("strong", null, "Biología"), " con el propósito de integrar la ",
-          E("strong", null, "programación y la ciencia biológica"), ". Diseñamos una aplicación interactiva que aplica la neurobiología de la dopamina, la nutrición celular, los ritmos circadianos y la homeostasis para transformar el cuidado personal diario en una experiencia lúdica, accesible y científicamente fundamentada."
-        )
-      ),
-
-      // Group Members Cards (Las 5 Estudiantes)
-      E("div", { className: "space-y-3" },
-        E("h3", { className: "font-fredoka font-bold text-parchment-100 text-xl flex items-center gap-2" },
-          E("span", null, "👥"), "Equipo de Desarrollo e Investigación (Grupo de Trabajo)"
-        ),
-        E("div", { className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-4" },
-          GROUP_MEMBERS.map((member, idx) => E("div", {
-            key: idx,
-            className: "bg-parchment-100 border-2 border-forest-800 p-5 rounded-3xl card-3d flex flex-col justify-between space-y-3 hover:translate-y-[-2px] transition"
-          },
-            E("div", { className: "space-y-2.5" },
-              E("div", { className: "flex items-center gap-3" },
-                E("span", { className: "text-3xl p-2 bg-parchment-200 rounded-2xl border border-parchment-400" }, member.avatar),
-                E("div", null,
-                  E("h4", { className: "font-fredoka text-lg font-bold text-forest-900 leading-tight" }, member.name),
-                  E("span", { className: "text-[10px] font-bold text-terracotta bg-terracotta/10 px-2 py-0.5 rounded-md" }, member.badge)
-                )
-              ),
-              E("div", { className: "text-xs font-bold text-forest-700" },
-                "🎓 3er Año Informática · ETec UM"
-              ),
-              E("div", { className: "text-xs text-forest-800 font-semibold" },
-                E("span", { className: "font-bold text-forest-950" }, "Área de Enfoque: "), member.focus
-              ),
-              E("p", { className: "text-[11px] text-forest-700 leading-relaxed bg-parchment-200/60 p-2.5 rounded-xl border border-parchment-300" },
-                member.desc
-              )
-            )
-          ))
-        )
-      ),
-
-      // Biology Theoretical Pillars
-      E("div", { className: "bg-parchment-200 border-2 border-forest-800 p-6 rounded-3xl card-3d space-y-4" },
-        E("h3", { className: "font-fredoka font-bold text-forest-900 text-xl flex items-center gap-2" },
-          E("span", null, "🔬"), "Fundamentación Científica y Biológica de la Aplicación"
-        ),
-        E("p", { className: "text-xs text-forest-700 font-semibold" },
-          "¿Por qué gamificar hábitos saludables? Nuestra propuesta se basa en 4 pilares fisiológicos demostrados:"
-        ),
-        E("div", { className: "grid md:grid-cols-2 gap-4" },
-          BIOLOGY_PILLARS.map((pillar, i) => E("div", {
-            key: i,
-            className: `p-4 rounded-2xl border-2 ${pillar.color} shadow-sm space-y-2`
-          },
-            E("div", { className: "flex items-center gap-2 font-fredoka font-bold text-forest-900 text-sm" },
-              E("span", { className: "text-xl" }, pillar.icon),
-              E("span", null, pillar.title)
-            ),
-            E("p", { className: "text-xs text-forest-800 leading-relaxed" }, pillar.summary)
-          ))
-        )
-      ),
-
-      // Open Scientific References
-      E("div", { className: "bg-forest-800 text-parchment-100 border-2 border-forest-600 p-6 rounded-3xl card-3d space-y-3" },
-        E("h4", { className: "font-fredoka font-bold text-gold text-base" }, "📚 Fuentes y Bibliografía Científica Abierta"),
-        E("ul", { className: "text-xs space-y-2 text-parchment-200 font-semibold" },
-          E("li", null,
-            "• ", E("a", { href: "https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet", target: "_blank", rel: "noopener", className: "underline text-gold hover:text-gold-light" }, "Organización Mundial de la Salud (OMS) — Alimentación Sana y Micronutrientes.")
-          ),
-          E("li", null,
-            "• ", E("a", { href: "https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/plate-spanish/", target: "_blank", rel: "noopener", className: "underline text-gold hover:text-gold-light" }, "Harvard T.H. Chan School of Public Health — El Plato para Comer Saludable.")
-          ),
-          E("li", null,
-            "• ", E("a", { href: "https://www.sleepfoundation.org/nutrition", target: "_blank", rel: "noopener", className: "underline text-gold hover:text-gold-light" }, "Sleep Foundation — Fisiología del Sueño, Melatonina y Ritmos Circadianos.")
-          ),
-          E("li", null,
-            "• ", E("a", { href: "https://fundaciondelcorazon.com/", target: "_blank", rel: "noopener", className: "underline text-gold hover:text-gold-light" }, "Fundación Española del Corazón — Nutrición celular y salud cardiovascular.")
-          )
-        )
-      )
+    // Discrete Academic Footer
+    E("footer", { className: "text-center pt-8 pb-4 text-xs text-parchment-300 font-semibold space-y-1 opacity-80" },
+      E("p", null, "Desarrollado con 💚 por estudiantes de 3° Informática · Escuela Técnica de la Universidad de Mendoza (ETec UM)"),
+      E("p", { className: "text-[11px] text-sage-light" }, "Noa Fischer · Constanza Smaha · María Villalobos · Paulina Olguin · Amparo Salinas · Clase de Biología (2026)")
     ),
 
-    // Floating Controls
+    // Floating Buttons (Feed & Sound)
     E(React.Fragment, null,
       E("button", {
         onClick: feedPet,
-        title: "Dar manzana nutritiva (8 monedas)",
+        title: "Dar manzana crujiente (8 monedas)",
         className: "fixed bottom-24 right-4 z-40 w-13 h-13 rounded-full bg-forest-800 border-2 border-gold text-2xl btn-3d flex items-center justify-center p-2.5 shadow-2xl"
       }, "🍏"),
       E("button", {
         onClick: toggleSound,
-        title: soundOn ? "Silenciar sonidos" : "Activar sonidos",
+        title: soundOn ? "Silenciar" : "Activar sonido",
         className: "fixed bottom-6 right-4 z-40 w-13 h-13 rounded-full bg-forest-800 border-2 border-gold text-2xl btn-3d flex items-center justify-center p-2.5 shadow-2xl"
       }, soundOn ? "🔊" : "🔇")
     ),
 
-    // Toast message
+    // Google Auth Modal Simulation
+    showAuthModal && E("div", {
+      className: "fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm"
+    },
+      E("div", { className: "bg-parchment-100 border-3 border-forest-800 p-6 rounded-3xl max-w-sm w-full card-3d space-y-4" },
+        E("div", { className: "text-center space-y-1" },
+          E("div", { className: "w-12 h-12 mx-auto bg-parchment-200 rounded-full flex items-center justify-center text-2xl border border-parchment-400" }, "🔐"),
+          E("h3", { className: "font-fredoka font-bold text-xl text-forest-900" }, "Iniciar Sesión con Google"),
+          E("p", { className: "text-xs text-forest-600 font-semibold" }, "Guardá tu progreso, niveles de tu mascota y rachas de hábitos.")
+        ),
+        E("div", { className: "space-y-2 pt-2" },
+          E("button", {
+            onClick: () => handleGoogleLogin("n.fischer@alumno.etec.um.edu.ar", "Noa Fischer (ETec)"),
+            className: "w-full p-3 rounded-2xl border-2 border-forest-800 bg-parchment-50 hover:bg-parchment-200 flex items-center gap-3 text-left transition"
+          },
+            E("div", { className: "w-8 h-8 rounded-full bg-forest-800 text-gold flex items-center justify-center font-bold text-xs" }, "NF"),
+            E("div", { className: "min-w-0 flex-1" },
+              E("div", { className: "text-xs font-bold text-forest-900 truncate" }, "Noa Fischer"),
+              E("div", { className: "text-[10px] text-forest-600 truncate" }, "n.fischer@alumno.etec.um.edu.ar")
+            )
+          ),
+          E("button", {
+            onClick: () => handleGoogleLogin("estudiante@etec.um.edu.ar", "Cuenta Institucional ETec"),
+            className: "w-full p-3 rounded-2xl border-2 border-parchment-400 bg-parchment-50 hover:bg-parchment-200 flex items-center gap-3 text-left transition"
+          },
+            E("div", { className: "w-8 h-8 rounded-full bg-sage-dark text-white flex items-center justify-center font-bold text-xs" }, "UM"),
+            E("div", { className: "min-w-0 flex-1" },
+              E("div", { className: "text-xs font-bold text-forest-900 truncate" }, "Cuenta Institucional ETec UM"),
+              E("div", { className: "text-[10px] text-forest-600 truncate" }, "estudiante@etec.um.edu.ar")
+            )
+          )
+        ),
+        E("div", { className: "pt-2 text-center" },
+          E("button", {
+            onClick: () => setShowAuthModal(false),
+            className: "text-xs text-forest-700 hover:text-forest-900 font-bold underline"
+          }, "Cancelar")
+        )
+      )
+    ),
+
+    // Toast
     toastMessage && E("div", {
       className: "fixed bottom-6 left-1/2 -translate-x-1/2 bg-forest-950 text-gold px-6 py-3 rounded-2xl font-fredoka font-bold border-2 border-gold shadow-2xl z-50 animate-bounce text-sm text-center"
     }, toastMessage)
