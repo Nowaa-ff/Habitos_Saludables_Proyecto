@@ -2376,6 +2376,15 @@ function render() {
   `;
 }
 
+// Exponer variables y funciones clave en window para los manejadores inline (onclick/oninput)
+Object.defineProperty(window, "state", { get: () => state, set: (v) => { state = v; } });
+window.ui = ui;
+window.sfx = sfx;
+window.render = render;
+window.saveState = saveState;
+window.showToast = showToast;
+window.launchConfetti = launchConfetti;
+
 // Renderizado inicial y verificación de recordatorios al abrir
 render();
 setTimeout(checkRemindersLoop, 2000);
