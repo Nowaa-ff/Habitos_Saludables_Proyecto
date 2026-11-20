@@ -6,11 +6,11 @@
 ---
 
 ## 👥 Integrantes del Grupo
-* **Noa Fischer** — Coordinación, Lógica de Hábitos & Neurobiología del Sistema Nervioso
-* **Constanza Smaha** — Investigación de Nutrición Celular, Glucemia & Bioenergética
-* **María Villalobos** — Gamificación RPG, Economía de Monedas & Fisiología del Movimiento
-* **Paulina Olguin** — Cronobiología, Higiene del Sueño & Sistema Glinfático
-* **Amparo Salinas** — Homeostasis Hidroelectrolítica, Calculadora de Hidratación & Diseño Visual
+* **Noa Fischer** 
+* **Constanza Smaha** 
+* **María Villalobos**
+* **Paulina Olguin** 
+* **Amparo Salinas** 
 
 ---
 
